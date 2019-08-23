@@ -1,0 +1,362 @@
+.header
+    &__navbar
+        background: #ffffff
+        transition: all .3s
+        width: 100%
+        @media(max-width : 991px)
+            padding-top: 0px
+            position: fixed
+            top: 0
+            left: 0
+            transition: all .3s
+            transform: translate3d(-100%,0,0)
+            z-index 9
+            background: none
+        &-container
+            max-width: 1330px
+            padding: 0 15px
+            width: 100%
+            margin: 0 auto
+            @media(max-width : 991px)
+                background: #ffffff
+                width: 255px
+                max-width 255px
+                background: #ffffff
+                padding-top: 35px
+                margin: 0
+                height 100vh
+                max-height: 100vh
+                overflow: auto
+        &-wrapper
+            border-top: 1px solid #FFF115
+            @media(max-width : 991px)
+                border: none
+        &-mobile
+            display: none
+            @media(max-width : 991px)
+                display block
+                margin-bottom: 20px
+                >*
+                    display: block
+                    padding: 0
+                    padding-bottom: 18px
+                    border: none
+                .header__mainbar-contact
+                    padding-bottom: 35px
+                    border-bottom: 1px solid #FFF115
+                .footer__column
+                    padding-top: 40px
+                    .footer__contact
+                        margin: 0
+
+    ul.menu
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin: 0 -8px
+        position relative
+        @media(max-width : 991px)
+            flex-wrap: wrap
+            margin: 0
+        li.item
+            background: transparent
+            padding: 0!important
+            margin: 0!important
+            display: block!important
+            padding: 0 8px!important
+            min-width: 0px
+            @media(max-width : 991px)
+                padding: 0!important
+                width: 100%
+                border-bottom: 1px solid #D8D8D8
+            &:hover
+                @media(min-width: 992px)
+                    .menu__dropdow
+                        max-height: 325px
+                        opacity: 1
+                        visibility: visible
+                    >a, .todas-categorias
+                        border: none!important
+                        color: #373535!important
+                        background: none!important
+                        border-bottom: 1px solid #FFF115!important
+
+                 &:nth-child(6),&:nth-child(7), &:nth-child(8), &:nth-child(9)
+                    .menu__dropdow
+                        right 0!important
+                        left auto
+            .menu__dropdow
+                position: absolute
+                left: 0
+                top: 101% 
+                opacity: 0
+                visibility: hidden
+                background: #ffffff
+                border 1px solid #E7E7E7
+                display: flex
+                overflow hidden
+                @media(max-width : 991px)
+                    position: static
+                    opacity: 1
+                    visibility: visible
+                    border: none
+                    background: #F4F4F4
+                    margin: 0 -15px
+                    transition: all .3s
+                    max-height: 0px
+                    >.menu__image
+                        display: none
+
+            .menu__list
+                flex: 1 1 auto
+                min-width: 260px
+                padding: 30px
+                max-height: 340px
+                overflow-y: scroll
+
+                @media(max-width : 991px)
+                    padding: 20px 15px
+                    width: 100%
+                    max-width: 100%
+                    flex: 1 1 100%
+                    min-width: 0px
+            .menu__image
+                flex: 1 1 auto
+                a
+                    display: block
+                    width: auto
+                    height auto
+                    font-size: 0px
+                    line-height: 0px
+                    border: none!important
+                img 
+                    padding: 0
+                    width: auto
+                    height: auto
+                    max-width: none
+                    max-height: none
+            .menu-geral-filho
+                float: none
+                padding: 0!important
+                justify-content: flex-start
+                height: 30px
+                font-size: 15px
+                color: #373535
+                font-weight: bold
+                line-height 19px
+                text-transform: none
+                text-align: left
+                @media(max-width : 991px)
+                    border: none
+                    font-size: 13px
+                    font-weight: bold
+                    height: auto!important
+                    min-height: 30px
+            &.todas-categorias
+                order: 1
+                position: static
+                @media(max-width : 991px)
+                    position relative
+                    &.select
+                        .menu__list
+                            max-height: 1000px
+
+                &:hover
+                    @media(min-width : 992px)
+                        .menu__dropdow
+                            max-height: 325px
+                            padding: 15px
+                            opacity: 1
+                            visibility: visible
+                .menu__list .arrowmenu
+                    display: none
+                .menu__dropdow
+                    position: absolute
+                    top: 101%
+                    width: 100%
+                    right: 0
+                    background: #fff
+                    overflow: auto
+                    border 1px solid #E7E7E7
+                    max-height: 0px
+                    padding: 0 15px
+                    transition: all .3s
+                    opacity: 0
+                    visibility: hidden
+                    @media(max-width : 991px)
+                        position: static
+                        max-height: none
+                        opacity: 1
+                        visibility: visible
+                        margin: 0 -15px!important
+                        border: none
+                        padding: 0
+                        width: auto
+                        max-width: none
+                        >div
+                            width: 100%
+                .menu__list
+                    column-count: 4
+                    max-height: none
+                    overflow: hidden
+                    @media(max-width : 991px)
+                        column-count: unset
+                        padding: 0
+                        background: #f4f4f4
+                        padding: 0 15px
+                        max-height: 0px
+                        transition: all .3s
+                li.todas-categoria-item
+                    height auto
+                    min-height: 0px
+                li.todas-categoria-sub
+                    display block!important
+                    width: auto!important
+                    height auto!important
+                    float: none!important
+                    break-inside: avoid
+                    padding-bottom: 15px!important
+                    @media(max-width : 991px)
+                        border: none
+                        padding: 0!important
+                        height auto!important
+                        min-height: 0px
+                    a
+                        border: none!important
+                        justify-content: flex-start
+                        margin: 0
+                        border-bottom: 1px solid transparent!important
+                        height auto
+                        line-height: 22px
+                        text-align: left
+                        text-transform: none
+
+                        @media(max-width : 991px)
+                            font-size: 12px
+                            font-weight: bold
+                            padding: 0
+                            height: auto!important
+                            min-height: 30px
+                        &:hover
+                            @media(min-width : 992px)
+                                border-bottom: 1px solid #FFF115!important
+                    >ul.filho
+                        width: auto!important
+                        height auto!important
+                        max-height: none!important
+                        float none
+                        overflow:initial
+                a.todas-categoria-sub
+                    font-size: 14px
+                    color: #373535!important
+                    font-weight: bold
+                    line-height: 19px
+
+            a
+                color: #373535
+                font-size: 12px
+                line-height: 14px
+                text-transform: uppercase
+                font-weight: 800
+                height 50px
+                border: none!important
+                border-bottom: 1px solid transparent!important
+                display: flex
+                align-items: center
+                justify-content: center
+
+                width: 100%
+                text-align: center
+                padding: 0
+
+                @media(max-width : 1199px)
+                    font-size: 11px
+
+                @media(max-width : 991px)
+                    justify-content: flex-start
+                    height 65px!important
+                    font-size: 12px
+                    text-align: left
+                    padding-right: 45px
+                    display: flex!important
+
+            .todas-categorias
+                height 50px
+                font-size: 0px
+                line-height: 11px
+                display: flex!important
+                align-items: center
+                justify-content: center
+                border-bottom: 1px solid transparent!important
+                width: 100%
+                padding: 0
+                text-align: center
+                @media(max-width : 991px)
+                    text-align: left 
+                    justify-content: flex-start
+                    height: 65px!important
+                &:before
+                    content: 'Ver outras categorias'
+                    font-size: 12px
+                    line-height: 14px
+                    display inline
+                    color: #A9A9A9
+                    font-weight: 800
+                    text-transform: uppercase
+                    @media(max-width : 1199px)
+                        font-size: 11px
+        li.select
+            @media(max-width : 991px)
+                a.menu-geral
+                    display: flex!important
+                >.menu__dropdow
+                    max-height: 1000px!important
+                .arrowmenu
+                    transform: rotate(180deg)
+        .arrowmenu
+            width: 45px
+            height 45px
+            right 0px
+            top: 10px
+            transition: all .3s
+            &:before
+                display: none
+
+            @media(min-width : 992px)
+                display: none
+            
+.moving--down
+    @media(min-width : 992px)
+        .header__navbar
+            transform: translateY(-100%)
+        .header__mainbar
+            box-shadow: 0.307px 0.307px 4px 0 rgba(0,0,0,.11)
+    @media(max-width : 991px)
+        .header__mainbar-serach
+            max-height: 0px
+            overflow: hidden
+            padding: 0
+            opacity 0
+            visibility: hidden
+
+.moving
+    @media(max-width : 991px)
+        .header__mainbar
+            box-shadow: 0.307px 0.307px 4px 0 rgba(0,0,0,.11)
+        .header__topbar
+            transform: translate3d(0, -100%, 0)
+
+.menu__open
+    overflow hidden
+    .header__navbar
+        transform: translate3d(0, 0, 0)
+        &:before
+            content: ''
+            position: fixed
+            display: block
+            top: 0
+            left 0
+            width: 100%
+            height 100%
+            background-color:rgba(0,0,0,0.75)
+            z-index -1

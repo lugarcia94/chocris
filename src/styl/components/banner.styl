@@ -1,0 +1,98 @@
+.full__banner
+    .slick-prev
+        left 0
+        @media(max-width : 991px)
+            width: 30px
+            height 30px
+    .slick-next
+        right 0
+        @media(max-width : 991px)
+            width: 30px
+            height 30px
+    img
+        max-width 100%
+        @media(max-width : 991px)
+            display: block
+            position relative
+            width: auto
+            max-width: 149%
+            left 50%
+            transform: translateX(-50%)
+    .fbits-banner-item
+        overflow hidden
+
+.mini-banner
+    &__container
+        max-width: 1330px
+        padding: 0 0.94rem
+        width: 100%
+        margin: 0 auto
+    &__wrapper
+        display flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+        padding-top: 50px
+        padding-bottom: 55px
+        @media(max-width : 767px)
+            padding-top: 20px
+        .fbits-banner-item
+            flex: 0 1 48.465%
+            overflow hidden
+            @media(max-width : 767px)
+                flex: 0 1 100%
+                margin-bottom: 15px
+            img
+                transition: all .3s
+                display: block
+                max-width: 100%
+                @media(max-width : 767px)
+                    margin: 0 auto
+                &:hover
+                    transform: scale(1.1)
+
+.mini-footer
+    &__container
+        max-width: 1330px
+        padding: 0 0.94rem
+        width: 100%
+        margin: 0 auto
+    &__wrapper
+        padding-bottom: 40px
+        padding-top: 60px
+        @media(max-width : 767px)
+            padding-bottom: 20px
+            padding-top: 0px
+    &__title
+        font-size: 35px
+        color: #434343
+        line-height: 32px
+        font-weight: 900
+        text-transform: uppercase
+        text-align: center
+        padding-bottom: 20px
+        @media(max-width : 767px)
+            font-size: 20px
+            padding-bottom: 25px
+    &__banners
+        display flex
+        align-items: center
+        justify-content: space-between
+        flex-wrap: wrap
+        @media(max-width : 767px)
+            justify-content: center
+        .fbits-banner-item
+            flex: 0 1 31.54%
+            @media(max-width : 767px)
+                flex: 0 1 100%
+                margin-bottom: 25px
+        img 
+            display: block
+            transition: all .3s
+            max-width 100%
+            @media(max-width : 767px)
+                margin: 0 auto
+            &:hover
+                transform: scale(1.1)
+    .fbits-banner-item
+        overflow hidden

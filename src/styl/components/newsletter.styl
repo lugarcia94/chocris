@@ -1,0 +1,64 @@
+.newsletter
+    background: #FFF115
+    padding: 20px 0
+    &__container
+        max-width: 1330px
+        padding: 0 0.94rem
+        width: 100%
+        margin: 0 auto
+    &__wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @media(max-width : 1199px)
+            flex-wrap: wrap
+            justify-content: center
+    &__title
+        font-size: 20px
+        color: #434343
+        font-weight: bold
+        line-height: 25px
+        @media(max-width : 1199px)
+            margin-bottom: 15px
+            text-align: center
+    .footerNewsForm
+        float: none
+        width: 65.388%
+        display: flex
+        align-items: center
+        @media(max-width : 1199px)
+            width: 100%
+        @media(max-width : 810px)
+            flex-wrap: wrap
+        input[type="text"]
+            float: none
+            width: 47.827%
+            margin: 0
+            border: 1px solid #E7E7E7
+            color: #BABABA
+            &::placeholder
+                color: #BABABA
+            @media(max-width : 810px)
+                width: 100%
+                margin-bottom: 12px
+                text-align: center
+    .newsletter-box + .newsletter-box
+        display: none
+    .newsletter-box
+        width: 81.177%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        @media(max-width : 810px)
+            flex-wrap: wrap
+            width: 100%
+    .btNews
+        float: none
+        margin: 0
+        background: #373535
+        color: #FFF115
+        font-size: 13px
+        font-weight: 800
+        height 40px
+        @media(max-width : 810px)
+            width: 100%

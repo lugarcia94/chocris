@@ -1,0 +1,1414 @@
+#bodyProduto , #bodyListaCompra
+
+    #avaliacao-Produto
+        max-height: 180px
+        overflow: hidden
+
+        &:before
+            content: 'Leia mais'
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            color: #333
+            text-decoration: underline
+            font-weight: 600
+            font-size: 15px
+            cursor pointer
+            display: block
+            width: 100%
+            text-align: center
+            background: white
+            z-index: 1
+
+    .open__item
+        max-height: none!important
+        
+        &:before
+            content: 'Leia menos'!important
+            background: transparent!important
+
+    @media(max-width: 991px)
+        padding-top: 150px
+
+    footer
+        margin-top 30px
+
+    li.todas-categorias
+        left: 0!important
+
+    select.optionProduct  
+        border: 1px solid #E8E8E8
+        max-width: 166px
+        width: 100%
+        border-radius: 1px
+        -webkit-appearance: none
+        background: #fff
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAGCAQAAABd57cKAAAAaklEQVQI12MwKzcr/c/IgAT+M5qVmZUzmOWa/jNb58YNE3bjNlsHFMkFMi38zD6bXbSSBwlbyZtdNPts4QdVZaVjds/0lbmNuY3pK7N7VjpI5jqImB4w/QmEBxxEGFBBGqtZl1lvGiuMDwCYoh5FSjiDnAAAAABJRU5ErkJggg==')
+        background-repeat: no-repeat
+        background-position: 95%
+        height 42px
+        font-size: 15px
+        color: #979797
+        font-style: italic
+        padding-left: 15px
+
+        @media(max-width: 767px)
+            max-width 100%
+
+    .product__price
+
+        .precoParcela 
+            width: 100%
+            text-align: center
+            display: none
+
+        span.fbits-parcela-de
+            font-size: 21px
+            color: #353535
+            font-weight: 400
+
+        .fbits-parcela-juros
+            font-size: 14px
+            color: #353535
+            font-weight: 400
+            
+        span.fbits-parcela , span.fbits-quantidadeParcelas,span.fbits-parcela-x
+            font-size: 21px
+            color: #5BC0B9
+            font-weight: 700  
+            text-transform: uppercase
+
+    .bread
+        @media(max-width: 992px)
+            margin: 0!important
+
+    #galeria 
+        max-width: 100%
+        margin-top 45px
+
+        @media(max-width: 991px)
+            margin-top 20px
+            
+        >a
+            display: block
+            margin: 0
+            margin-bottom 15px!important
+            max-width: 85px
+
+    #fbits-div-preco-off 
+        display: none
+
+    .fbits-layout-item 
+        display: none
+    
+    &.moving--down
+        [id*="produto-variante"]
+            @media(max-width: 768px)
+                bottom: 0
+
+    .fbits-componente-imagemvariantethumb img 
+        border: none
+        border-radius: 3px
+        margin: 0
+        width: auto!important
+        max-width: 90px!important
+
+    .fbits-componente-imagemvariantethumb.fbits-produto-imagens
+        width: 85px 
+        order: -1
+        &:first-child
+            a
+                opacity 1!important
+
+        a.active   
+            opacity 1
+
+        a  
+            width 100%
+            height auto 
+            display: flex!important
+            align-items: center
+            max-width 105px
+            margin: 0 auto!important
+            opacity 0.6
+            margin-bottom 15px!important
+
+            @media(max-width: 991px)
+                max-width: 100%
+                opacity: 1
+            
+            img   
+                margin: 0 auto
+
+        @media(max-width: 991px)
+            width 100%!important
+            
+
+             
+
+    #msgEstoqueDisponivel
+        margin: 0
+        order: 2
+        margin: 0 auto
+        display: none
+
+        span  
+            font-size: 12px
+            color: $cor02
+            max-width 140px
+            display: block 
+            text-align: center
+
+    .avisoIndisponivel
+        margin: 10px 0
+        text-align: center
+
+        h3 
+            font-size: 15px
+            text-transform: uppercase
+
+        p  
+            font-size: 12px
+
+        input 
+            width 100%
+            margin-top 10px
+            border: 1px solid $cor03
+            border-radius: 3px
+
+        #btnEnviarAviseMe
+            border: none 
+            background: $cor01
+            color: #fff 
+            font-weight: 700
+            text-transform: uppercase
+            height 40px
+
+    .jcarousel-prev-horizontal
+    .jcarousel-next-horizontal
+        display: none !important
+
+    .main-container
+        @extend $container 
+
+    .product__price 
+        position relative
+        border: 1px solid #E7E7E7
+        padding: 20px 15px
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column
+
+        .product__boleto
+            order: 1
+
+        [id*="produto-variante"]
+            order: 2
+
+        .bottom__price
+            order: 3
+
+    .product__details-variation 
+        margin: 30px 0
+
+    .product__economize 
+        padding: 15px
+        background: #F8F8F8
+        max-width: 265px
+        margin: 15px 0
+        margin-top 0
+        @media(max-width: 425px)
+            max-width 100%
+        .economize__topo
+            text-align: center
+            padding: 10px 0
+            background: $cor03
+
+            span    
+                font-size: 14px
+                text-transform: uppercase
+                font-weight: 600
+
+                strong
+                    color: $cor01
+                    font-weight: 600
+
+        .product__price-on
+            margin-top 5px
+
+            .product__price-installments
+                display: none
+        
+            .fbits-preco
+                justify-content: center
+
+            .precoDe
+                font-size: 15px
+
+    .product--item
+        display: flex
+        align-items: flex-start
+        flex-wrap: wrap
+        margin-top: 15px
+
+    .product--item-container
+        display: flex
+        align-items: flex-start
+        max-width: 100% 
+        width: 100%
+        flex-wrap: wrap
+        justify-content: space-between
+    
+    .optionAtributos
+        >ul
+            width: 100%
+            >li
+                width: 100%
+                >ul
+                    width: 100%
+
+                    li  
+                        margin: 10px 0
+
+                        @media(max-width: 767px)
+                            width 100%
+                            text-align: center
+
+    [data-atributospagproduto]
+        >div
+            display: flex
+            align-items: flex-start 
+            flex-wrap: wrap 
+            margin-bottom 40px
+            margin: 0  
+
+            @media(max-width: 767px)
+                justify-content: center
+ 
+
+            >*
+                font-size: 13px
+                line-height: 13px
+                font-weight: 400
+                display: flex
+                align-items: center
+                justify-content: center
+                color: $cor02
+                overflow: hidden
+                cursor: pointer
+                transition: all 300ms ease-in-out  
+                width: 80px!important
+                height 30px!important 
+                margin: 0
+                padding: 0
+                border: none!important
+                background: #EFEFEF
+                color: #333333 
+                margin-right 10px
+                
+                &[data-atributoselecionado="False"]
+                    border: none !important
+
+                &[data-atributoselecionado="True"]
+                    
+                    color: #fff
+                    background: #373535
+                    font-weight: 700
+
+                &:not(.selected)
+                    &:hover
+                        background: #373535
+                        color: #fff
+                        font-weight: 700
+
+            >a
+                background: #fff
+                padding: 0 !important
+                overflow: initial
+                height: auto
+               
+
+                &:not(.selected)
+                    &:hover
+                        border: 1px solid $cor01
+                        background: #fff
+
+            .valorAtributoFoto
+                // border: none !important
+                background: #fff
+                width: 50px
+                height: auto
+                background-size: auto 40px !important
+                background-position: top center !important
+                margin-top: 10px
+                position relative 
+                display: block
+     
+ 
+
+            .valorAtributo[data-atributoselecionado="False"]
+                border none
+                &:hover 
+                    border none !important
+
+
+    
+    #buscadorCep
+        h3
+            font-weight: 400
+            color:$cor02
+    #contentBuscarCep
+        .forminline
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+        label
+            width: 100%
+            margin-top: 15px
+        select
+            background: #fff
+            display: inline-block
+            border: 1px solid #ddd
+            height: 45px
+            border-radius: 3px
+
+
+
+            &#TipoLogradouro,
+            &#Cidade_Estado_Sigla
+                width: 30%
+        input
+            border-radius: 3px
+            background: #fff
+            display: block
+            border: 1px solid #ddd
+            height: 45px
+
+            &#Logradouro
+                width: 68%
+                margin-left: 2%
+        .btBuscarCep
+            border: 1px solid $cor01
+            font-size: 16px
+            background: $cor01
+            color: #000
+            width: 100%
+            margin-top: 15px
+
+        .paginacao
+            display: none
+
+
+    .brand__one
+        width: 100%
+        a
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 50px
+
+
+
+    .showcase__one
+        position: relative
+        padding: 1px 0
+        margin: 0!important
+        width 100%!important
+        overflow: hidden
+        padding-top: 75px
+
+        .item-block-title
+            border: none
+            margin-bottom: 20px
+            text-align: center
+            text-transform: uppercase
+            font-size: 35px
+            font-weight: 700
+            color: #434343
+            position relative
+            z-index 1
+            font-size: 0
+
+
+            &:after
+                z-index 0
+                content: 'Produtos similares'
+                width 35%
+                position absolute
+                left: 50% 
+                transform: translate(-50%, -50%)
+                height 50px
+                background: #fff
+                font-size: 35px
+
+                @media(max-width: 767px)
+                    width 80%
+                    font-size: 20px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+
+            &:before
+                content: ''
+                width: 100%
+                height: 1.1px
+                position: absolute
+                background: #FFF115
+                display: block
+                top: 50%
+                transform: translateY(-50%)
+                z-index -1
+
+            .fbits-conteudo-item
+                position: relative;
+                display: flex
+                justify-content: center
+                >span 
+                    border-bottom:1px solid #3d161d !important;
+                    top: 1.06rem;
+                    display: table-cell;
+                    height: 1px;
+                    top: 17px;
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                
+                >div
+                    background: #fff
+                    display: flex
+                    align-items: center
+                    font-size: 1.88rem
+                    line-height: 1.88rem
+                    color: #a85449
+                    font-weight: 700
+                    position: relative
+                    z-index: 1
+                    padding: 0 15px
+                    span 
+                        color: #a85449
+                        font-size: 1.88rem
+                        line-height: 1.88rem
+                        display: block 
+                        margin: 0 10px 0 0
+                        font-weight: 300
+                    
+
+ 
+
+    .review-post
+        .pontosAvaliacao
+            text-align: left
+            margin: 0
+            padding: 0
+
+        span.reviewUser 
+            color: #373737
+            font-weight: 400!important
+            text-transform: none
+            font-size: 14px
+
+
+        .divOpinioes
+            display: none
+        
+        .opinioesConteudo
+            margin: 0
+
+        .review
+            background: none
+            padding: 15px 0 
+            
+            &:last-child
+                border: none
+
+        blockquote
+            border: none
+            color: #373737
+            font-weight: 400
+            text-transform: none
+            font-size: 14px
+
+            @media(max-width: 767px)
+                text-align: justify
+
+        span.icon
+            height: 16px
+            margin: 0 4px
+            line-height: 18px
+
+        .reviewMeta
+            padding: 0
+
+            @media(max-width: 767px)
+                justify-content: flex-end
+
+        .reviewUser
+            display: block
+            font-weight: 600
+            font-size: 12px
+
+
+        #avaliacao-Produto 
+            position: relative
+
+        #fbits-indicacao-amigo
+        #fbits-avaliar-produto
+            .line
+                margin: 0
+                span
+                    display: none
+
+                h2
+                    font-size: 25px
+                    line-height: 25px
+                    font-weight: 700
+                    color: #373535
+                    text-transform: uppercase
+                    text-align: left
+                    margin: 0
+                    padding: 0
+                    position relative
+                    width 100%
+                    display: flex
+                    align-items: center
+                    margin-bottom 40px
+
+                    @media(max-width: 992px)
+                        font-size: 23px
+                        display: flex
+                        justify-content: center
+ 
+
+                    @media(max-width: 992px)
+                        font-size: 30px
+
+            .texto-indique
+            .texto-avalie
+                font-size: 14px
+                line-height: 15px
+                color: $cor02
+                text-align: left
+                margin-bottom 10px
+
+                @media(max-width: 992px)
+                    text-align: center
+                    margin-top 5px
+                    min-height: 38px
+                    height: auto
+            input
+                border: 1px solid #E7E7E7
+                height: 40px
+                padding: 0 
+                border-radius: 1px
+                font-size: 15px
+                color: #BABABA
+                font-weight: 400
+                text-transform: none 
+                font-family: 'Muli'
+
+                @media(max-width: 767px)
+                    font-size: 11px
+
+                &::placeholder
+                    font-size: 15px
+                    color: #979797
+                    font-weight: 600
+
+            textarea
+                border: 1px solid #E7E7E7
+                font-size: 15px
+                color: #BABABA   
+                text-transform: none
+                font-family: 'Muli'
+                height 100px
+
+
+            .btAvaliar
+                button
+                    background: #373535
+                    color: #fff
+                    border-style: solid
+                    border-width: 1px 
+                    border-radius: 3px
+                    text-transform: uppercase
+                    height: 40px
+                    line-height: 35px
+                    font-weight: 600
+                    font-size: 15px
+
+                    @media(max-width: 768px)
+                        margin: 0
+                        
+
+            #ddlNota
+                border: 1px solid #E8E8E8 
+                font-size: 13px
+                color: #a09f9f
+                background: none
+                border-radius: 0
+                width: 130px 
+                display: flex
+                justify-content: space-between
+                align-items: flex-start
+                flex-wrap: wrap 
+                height 40px
+                align-items: center
+                
+
+    .avalie-indique
+        position: relative
+        .fbits-indicacao-amigo table tbody tr
+            @media(max-width : 767px)
+                display: flex
+                td:first-child
+                    margin-right: 30px
+
+
+
+    @import 'zoom'
+    @import 'details'
+    @import 'price'
+    @import 'info'
+    @import 'comprejunto'
+
+
+.regras-frete
+    text-decoration: underline
+    padding: 5px 0
+    background: none
+
+.modal-regra-frete
+    &:after
+        content: ''
+        background: #000
+        opacity: 0
+        visibility: hidden
+        position: fixed
+        top:0
+        bottom: 0
+        right: 0
+        left: 0
+        z-index: -1
+        transition: all 150ms ease-in-out
+        .modal-frete-on &
+            opacity: 0.8
+            z-index: 1000
+            visibility: visible
+
+    strong
+        display: block
+        width: 100%
+        margin-top: 15px
+
+    span
+        color: $cor01
+        font-weight: 600
+
+#BtnGeraContraProposta, button#btnAlertar
+    background: #000000
+    font-weight: 600
+    max-width 100%
+.fbits-alerta-valor-modal-body
+    color: #000000
+.fbits-Contraproposta-modal-header, .tituloAlertaValores
+    border-color:#000000
+    color: #000000
+    margin-top: 35px
+.fbits-Contraproposta-input-group-addon
+    border-color: #ccc
+    background: #fff
+.fbits-Contraproposta-form-control
+    border-color: #ccc!important
+.tituloAlertaValores span.fbits-icone-pagar-menos:before
+    color: #000000
+ 
+
+// li.atributos-container.atributos-tamanho 
+//     display: none!important
+
+#fbits-forma-pagamento
+    float: none 
+    margin: 0
+    line-height: 1.5rem 
+
+    #divFormaPagamento
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+
+    *
+        float: none
+ 
+
+
+    .precoVista
+        display: none
+
+    .precoPor.com-precoDe:before
+        display: none
+
+    .precoPor
+    .precoPor.com-precoDe 
+        color: #373535
+        font-size: 22px
+        line-height: 24px
+        font-weight: 700
+        margin: 5px 0
+ 
+    .precoDe
+        color: #ADADAD
+        font-size: 14px
+        font-weight: 700
+        line-height: 15px
+        text-decoration: line-through
+        width: 100%
+        text-align: center
+
+    
+.details-content
+    padding: 0!important 
+    
+    p
+        text-align: center
+
+
+
+
+
+    &:before
+        display: none
+
+.alerta__frete 
+    display: flex
+    align-items: center
+    justify-content: space-between 
+    margin-top 10px
+
+    .fbits-Contraproposta-modal
+        display: none
+
+    > div 
+        &:last-child
+            display: none
+
+.atrib__description
+    .line
+        text-align: center
+        margin-bottom: 0
+
+        > span 
+            display: none
+
+        h3  
+            font-size: 12px
+            color: #3D161D
+            font-weight: 600
+            text-transform: capitalize
+            margin: 0
+            padding: 0
+
+            @media(max-width: 992px)
+                font-size: 16px
+
+    ul 
+        li  
+            font-size: 12px
+            color: #3D161D
+            font-weight: 600
+            display: flex
+            align-items: center
+
+            @media(max-width: 992px)
+
+                font-size: 16px
+            span  
+                color: #6D6A5C
+                font-weight: 500
+            img  
+                margin-right 5px
+
+
+
+div#fbits-avaliar-produto
+    .line
+        margin: 0
+
+.review-post 
+    margin-top: 70px
+
+    h2  
+        font-size: 25px
+        text-transform: uppercase
+        color: #373535
+        font-weight: 700
+
+
+#formAvaliacao
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+
+    @media(max-width: 992px)
+        justify-content: space-between
+
+.avaliacoment
+    width 100%
+
+.btAvaliar, .pontosAvaliacao.clear
+    width auto
+
+.pontosAvaliacao.clear 
+    width: auto
+    display: flex
+    align-items: center
+
+    @media(max-width: 992px)
+        width 50%
+
+        select#ddlNota
+            margin: 0
+
+.showcase__one
+    .showcase__container
+        ul  
+            display: none 
+
+            &:first-child
+                display: block
+
+.product__offer
+    max-width 300px
+    width 100% 
+    position: static!important
+    @media(min-width 991px)
+        ~div
+            display: none!important
+
+    @media(max-width: 1250px)
+        max-width 25%
+
+    @media(max-width: 991px)
+        max-width 45%
+        margin: 0
+
+    @media(max-width: 767px)
+        max-width 100%
+
+
+.sku__brand
+    display: flex
+    align-items: center 
+    margin-top 20px
+    width: 100%
+
+    .fbits-sku
+        color: #353535
+        font-weight: 600
+        font-size: 13px
+        justify-content: center
+
+    .marca
+        font-size: 13px
+        color: #353535 
+        order: -1
+        margin-right 25px
+
+        &:before
+            content: 'Marca:'
+            margin-right: 5px
+
+.short__description
+    margin-top 50px
+
+    @media(max-width: 991px)
+        margin-top 20px
+
+    .paddingbox
+        font-size: 14px
+        color: #353535
+        text-align: justify
+        max-height: 55px
+        overflow hidden
+        font-weight: 300
+        line-height: 18px
+
+    span  
+        font-size: 12px
+        color: #333
+        text-align: left 
+        max-height: 55px
+        overflow hidden
+        font-weight: 400
+        line-height: 18px
+        display: block
+
+        @media(max-width: 767px)
+            text-align: justify
+
+        p  
+            font-size: 14px
+            line-height: 18px
+            color: #353535
+            text-align: justify
+            max-height: 55px
+            overflow hidden
+            font-weight: 300
+
+    a 
+        font-size: 12px
+        color: #333333
+        font-weight: 700
+        text-decoration: underline
+        display: block
+ 
+
+
+#fancybox-overlay
+    z-index: 999999
+
+#fancybox-wrap 
+    z-index: 9999999
+
+    @media(max-width: 767px)
+        left: 50%!important
+        transform: translate(-50%, -50%)
+        top: 50%!important
+        position: fixed
+
+.wrapper.institucional
+    margin-top: 20px
+
+    .wrapper__text 
+        margin-top 50px
+
+        span 
+            font-size: 21px
+            color: #353535
+            font-weight: 700
+            text-transform: uppercase
+            text-align: center
+            display: block
+            margin-bottom 30px
+
+        p 
+            font-size: 15px
+            color: #353535
+            line-height: 32px
+            margin-bottom 15px
+            text-align: justify
+
+    .timeline 
+        display: flex
+        justify-content: center
+        flex-wrap: wrap 
+        margin: 100px 0
+
+        @media(max-width: 767px)
+            justify-content: space-between
+
+        li
+            margin-left: -40px
+
+            @media(max-width: 767px)
+                margin: 20px auto
+
+            &:first-child
+                z-index 5
+
+            &:nth-child(2)
+                z-index 4
+
+            &:nth-child(3)
+                z-index 3
+
+            &:nth-child(4)
+                z-index 2
+
+            &:nth-child(5)
+                z-index 1
+
+    .estrutura__list 
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        margin-bottom 50px
+
+        li      
+            flex: 0 0 33%
+
+            @media(max-width: 767px)
+                flex: 0 0 100%
+                text-align: center
+
+            img   
+                padding: 15px
+
+.institucional__body
+    @media(max-width: 991px)
+        padding-top 150px
+
+    footer
+        border-top: 10px solid #353535
+
+.button__call 
+    margin-top: 15px
+    background: #5bbfb8
+    height 40px 
+    transition: all 150ms ease-in-out
+
+    &:hover
+        opacity: 0.8
+
+    a  
+        color: #fff 
+        display: block
+        height 40px
+        line-height: 40px
+        text-align: center
+        font-size: 16px
+        font-weight: 700
+        text-transform: uppercase
+
+#bodyProduto
+    @media(max-width : 991px)
+        .header__topbar
+            display: none
+            
+    .etiqueta__produto 
+        .fbits-etiqueta-selo 
+            max-width: 130px
+            
+.bottom__price 
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: center
+    margin-top 10px
+    width: 100%
+
+.avaliacao
+.reviewMeta
+    align-items: center
+    display: flex
+    justify-content: flex-start
+    order: -1 
+
+    span
+        &:last-child
+            display: none
+    .icon
+        &.starEmpty
+            &:before
+                @extend $ico-before
+                background-image svg-inline(starempty)
+                height: 15px
+                width: 15px
+                transition: $transition
+
+        &.star
+            &:before
+                @extend $ico-before
+                background-image svg-inline(star1)
+                height: 15px
+                width: 15px
+                transition: $transition
+
+
+.fbits-etiquetas-sequencial 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+.ribbon.fbits-etiqueta-off, .produto .fbits-preco-off
+    background: #FF5D5D
+    border-radius: 0
+    width: 60px
+    height: 30px
+    font-size: 12px
+    font-weight: 700
+    white-space: inherit
+    line-height: 12px
+
+.fbits-etiqueta-lancamento,
+.fbits-etiqueta-destaque,
+.fbits-etiqueta-trocagratis,
+.fbits-etiqueta-promocao-de-por,
+.fbits-etiqueta-promocao,
+.fbits-etiqueta-fretegratis
+    background: #ddd
+    font-weight: 600
+    font-size: 12px
+    overflow: hidden
+    border-radius: 30px
+    display: flex !important
+    align-items: center
+    justify-content: center
+    text-transform: uppercase
+    height: 50px !important
+    color: #fff
+    // padding: 5px 10px !important
+    padding: 5px
+    margin: 2.5px 0 !important
+    float: none
+    width: 50px !important
+    text-align: center
+
+    img
+        display: none
+
+    &:before
+        font-size: 13px
+        line-height: 13px
+        width: 100%
+        word-wrap: break-word
+        
+
+.fbits-etiqueta-lancamento
+    background: #FFCB3C!important
+    img
+        display: none !important
+    &:before
+        content: 'NOVIDADE'
+        color: #3D161D
+
+.fbits-etiqueta-destaque
+    background: #373737
+    img
+        display: none !important
+    &:before
+        content: 'DESTAQUE'
+        color: #fff
+
+.fbits-etiqueta-promocao-de-por
+.fbits-etiqueta-promocao
+    background: #f0932b !important
+    img
+        display: none !important
+
+    &:before
+        content: 'Promoções'
+
+
+.fbits-etiqueta-trocagratis
+    img
+        display: none !important
+
+    &:before
+        content: 'Troca Grátis'
+
+
+.fbits-etiqueta-fretegratis
+    background: #40dfcf
+    img
+        display: none !important
+    &:before
+        content: 'Frete Grátis'
+ 
+
+
+.fbits-preco-off,
+.fbits-etiqueta-off
+    background: #e5222e
+    color: #fff
+    font-size: 11px
+    line-height: 11px
+    font-weight: 800
+    height: 25px
+    width: 65px
+    border-radius: 3px
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-top: 3px
+    margin-left: 2px
+
+.ui-slider-tabs-list-container
+    .ui-slider-tabs-list
+        width 100%!important
+        display: flex
+        justify-content: space-between
+
+.showcase__one
+    .slick-prev, .slick-next 
+        top: 50%
+        @media(max-width : 991px)
+            width: 30px
+            height 30px
+            top: 30%
+
+.slick-prev, .slick-next 
+    font-size: 0
+    line-height: 0
+    position: absolute
+    display: block
+    width: 20px
+    height: 20px
+    padding: 0
+    -webkit-transform: translate(0,-50%)
+    -ms-transform: translate(0,-50%)
+    transform: translate(0,-50%)
+    cursor: pointer
+    color: transparent
+    border: none
+    outline: none
+    background: transparent
+
+.slick-prev
+    left 0
+
+.slick-next
+    right 0
+
+section.showcase__one.showcase__list .showcase__container 
+    margin-top: 80px
+ 
+
+.fbits-comprar
+    display: none!important
+
+.btAvaliar
+    @media(max-width: 425px)
+        width 48%
+
+@media(max-width: 991px)
+    ul.slick-dots
+        display: flex!important
+        justify-content: center
+        align-items: center
+
+        li
+            margin: 0 4px                    
+            background: #E7E7E7
+            width: 10px
+            height 10px
+
+            button
+                font-size: 0
+
+        li.slick-active
+            width: 14px
+            height: 14px
+            background: #FFF115
+
+@media(max-width: 767px)
+    .showcase__one.showcase__list .showcase__container 
+        padding: 0
+ 
+
+.form__consulta
+    background: #F4F4F4
+    border: 1px solid #E7E7E7
+    padding: 25px
+    
+
+    strong
+        margin-left: 5px 
+
+        span
+            display: block
+
+    > span
+        font-size: 20px
+        color: #333333
+        font-weight: 700
+        line-height: 21px
+        display: flex
+        align-items: center 
+        justify-content: center
+
+        &:before
+            content: '' 
+            width: 30px
+            height 30px
+            background-image svg-inline(consulta)
+            background-size: 100%
+            background-position: center
+            background-repeat: no-repeat
+            position relative 
+
+        strong
+            display: block
+
+
+    form
+        margin-top 20px
+        font-family: 'Muli'
+
+        label
+            font-size: 13px
+            color: #BABABA
+            font-weight: 400
+            font-style: italic 
+            display: inline-flex
+            align-items: center
+            width: 49%
+            margin-bottom 10px
+
+            input
+                border: 1px solid #D9D9D9
+                width: 15px
+                height 15px
+                -webkit-appearance: none
+                border-radius: 3px
+                background: #fff 
+                margin-right 3px
+
+                &:checked
+                    background: $cor02
+
+        input[type='text'],input[type='mail']
+            width 100%
+            border: 1px solid #E7E7E7
+            background: #FFFFFF
+            height 40px
+            margin-bottom 10px 
+            text-indent: initial
+            padding-left 20px
+            font-family: 'Muli'
+            color: #BABABA
+            font-size: 15px
+            font-style: italic
+
+            &::placeholder
+                font-family: 'Muli'
+                color: #BABABA
+                font-size: 15px
+                font-style: italic
+
+        input[type='submit']
+            background: #373535
+            width: 100%
+            height: 40px
+            font-size: 15px
+            color: #FFFFFF
+            text-transform: uppercase
+            font-weight: 700
+            margin-top: 10px
+
+            &:hover
+                opacity 0.8
+
+        textarea
+            width: 100%
+            font-family: 'Muli'
+            color: #BABABA
+            font-size: 15px
+            font-style: italic
+            height 77px
+            text-indent: initial 
+            padding-top 15px
+            padding-left 20px
+            &::placeholder
+                font-family: 'Muli'
+                color: #BABABA
+                font-size: 15px
+                font-style: italic 
+                
+.content.produto
+    border-top: 1px solid #F3F3F3 

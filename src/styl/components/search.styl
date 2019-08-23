@@ -1,0 +1,36 @@
+.search
+  flex 1 1 250px
+  float none
+  max-width 350px
+  width auto
+
+
+.headerSearch
+  float none
+  margin 0
+  width auto
+
+  button#btnBusca
+    background svg-inline(search) no-repeat center center
+    height 55px
+    transform scaleX(-1)
+    width 44px
+
+input.inputSearch
+    background-color #f7f7f7
+    border 1px solid #eaeaea
+    border-radius 2px
+    height 55px
+    padding 0 45px 0 10px
+    text-indent 0
+    transition all 150ms ease-in-out
+
+
+
+  &:focus
+    background-color white
+    border-color $cor02
+
+
+.isearch
+  display none

@@ -1,0 +1,268 @@
+$ico
+    background-color: transparent
+    background-position: center center
+    background-repeat: no-repeat
+
+$ico-before
+    background-position: center center
+    background-repeat: no-repeat
+    content: ''
+    display: inline-block
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    height: 25px
+    width: 25px
+
+@svg-load medal url("../assets/svg/medal.svg")
+@svg-load store url("../assets/svg/store.svg")
+@svg-load creditcard url("../assets/svg/creditcard.svg")
+@svg-load barcode url("../assets/svg/barcode.svg")
+
+.header__topbar-item--one
+    .header__topbar-icon
+        background-image svg-inline(medal)
+        width: 17px
+        height: 18px
+        background-size: auto
+        background-repeat: no-repeat
+        background-position: center
+        margin-right 3px
+        display: block
+.header__topbar-item--two
+    .header__topbar-icon
+        background-image svg-inline(store)
+        width: 17px
+        height: 17px
+        background-size: auto
+        background-repeat: no-repeat
+        background-position: center
+        margin-right 2px
+        display: block
+.header__topbar-item--three
+    .header__topbar-icon
+        background-image svg-inline(creditcard)
+        width: 19px
+        height: 17px
+        background-size: auto
+        background-repeat: no-repeat
+        background-position: center
+        margin-right 4px
+        display: block
+.header__topbar-item--four
+    .header__topbar-icon
+        background-image svg-inline(barcode)
+        width: 17px
+        height: 14px
+        background-size: auto
+        background-repeat: no-repeat
+        background-position: center
+        margin-right 4px
+        display: block
+
+@svg-load telephone url("../assets/svg/telephone.svg")
+@svg-load whatsapp url("../assets/svg/whatsapp.svg")
+.header__topbar-phone--one
+    .header__topbar-icon
+        background-image svg-inline(telephone)
+        width: 17px
+        height: 17px
+        background-size: auto
+        background-repeat: no-repeat
+        background-position: center
+        margin-right 3px
+        display: block
+.header__topbar-phone--two
+    .header__topbar-icon
+        background-image svg-inline(whatsapp)
+        width: 17px
+        height: 17px
+        background-size: auto
+        background-repeat: no-repeat
+        background-position: center
+        margin-right 3px
+        display: block
+
+@svg-load lupa url("../assets/svg/lupa.svg")
+input.inputSearch
+    background-image svg-inline(lupa)
+    background-size: auto
+    background-position: 3% center
+    background-repeat: no-repeat
+
+@svg-load user url("../assets/svg/user.svg")
+@svg-load box url("../assets/svg/box.svg")
+@svg-load chat url("../assets/svg/chat.svg")
+.header__mainbar-account
+    a
+        display: flex
+        align-items: center
+    &--icon
+        display: block
+        width: 13px
+        height 15px
+        margin-right: 3px
+        background-image svg-inline(user)
+        background-size: auto
+        background-position: center
+        background-repeat: no-repeat
+.header__mainbar-order
+    a
+        display: flex
+        align-items: center
+    &--icon
+        display: block
+        width: 15px
+        height 15px
+        margin-right: 3px
+        background-image svg-inline(box)
+        background-size: auto
+        background-position: center
+        background-repeat: no-repeat
+.header__mainbar-contact
+    a
+        display: flex
+        align-items: center
+    &--icon
+        display: block
+        width: 15px
+        height 15px
+        margin-right: 3px
+        background-image svg-inline(chat)
+        background-size: auto
+        background-position: center
+        background-repeat: no-repeat
+
+@svg-load cart url("../assets/svg/cart.svg")
+.header__mainbar-cart
+    .carrinho.carrinhoHead
+        a
+            &:before
+                content: ''
+                display: flex
+                width: 25px
+                height 23px
+                background-image svg-inline(cart)
+                background-size: auto
+                background-position: center
+                background-repeat: no-repeat
+                position relative
+                z-index 1
+
+@svg-load facebook url("../assets/svg/facebook.svg")
+@svg-load youtube url("../assets/svg/youtube.svg")
+@svg-load linkedin url("../assets/svg/linkedin.svg")
+.footer__social-link
+    &--facebook
+        background-image svg-inline(facebook)
+        background-size: auto
+        background-position: center
+        background-repeat: no-repeat
+    &--youtube
+        background-image svg-inline(youtube)
+        background-size: auto
+        background-position: center
+        background-repeat: no-repeat
+    &--linkedin
+        background-image svg-inline(linkedin)
+        background-size: auto
+        background-position: center
+        background-repeat: no-repeat
+
+@svg-load right url("../assets/svg/arrow-right.svg")
+@svg-load left url("../assets/svg/arrow-left.svg")
+.slick-prev.slick-arrow
+    background-image svg-inline(left)!important
+    background-size: auto!important
+    background-position: center!important
+    background-repeat: no-repeat!important
+    width: 40px
+    height 40px
+    z-index: 9
+    &:before
+        display: none
+.slick-next.slick-arrow
+    background-image svg-inline(right)!important
+    background-size: auto!important
+    background-position: center!important
+    background-repeat: no-repeat!important
+    width: 40px
+    height 40px
+    z-index: 9
+    &:before
+        display: none
+
+.stay-modal-home .stay-content .slick-arrow.slick-next
+    background-image svg-inline(right)!important
+    background-size: auto!important
+    background-position: center!important
+    background-repeat: no-repeat!important
+
+.stay-modal-home .stay-content .slick-arrow.slick-prev
+    background-image svg-inline(left)!important
+    background-size: auto!important
+    background-position: center!important
+    background-repeat: no-repeat!important
+
+@svg-load starempty url("../assets/svg/staar0.svg")
+@svg-load star1 url("../assets/svg/star1.svg")
+@svg-load money url("../assets/svg/money.svg")
+@svg-load sino url("../assets/svg/sino.svg")
+
+@svg-load menumobile url("../assets/svg/menu-mobile.svg")
+.header__mainbar-mobile
+    background-image svg-inline(menumobile)
+    background-size: auto
+    background-position: center
+    background-repeat: no-repeat
+@svg-load arrowmenumobile url("../assets/svg/arrow-menu-mobile.svg")
+span.arrowmenu
+    background-image svg-inline(arrowmenumobile)
+    background-size: auto
+    background-position: center
+    background-repeat: no-repeat
+
+@svg-load consulta url("../assets/svg/consulta.svg")
+@svg-load arrowmenuclose url("../assets/svg/arrow-menu-close.svg")
+.header__mainbar-mobile-close
+    background-image svg-inline(arrowmenuclose)
+    background-size: auto
+    background-position: center
+    background-repeat: no-repeat
+    width: 45px
+    height 45px
+    position absolute
+    top: 0
+    left 255px
+    @media(min-width : 992px)
+        display: none
+
+@svg-load removefilter url("../assets/svg/remove-filter.svg")
+.category__filter .fbits-componente-filtro-selecionados-filho.checked >a
+    background-image svg-inline(removefilter)
+    background-size: auto
+    background-position: center
+    background-repeat: no-repeat
+
+@svg-load arrowdownselect url("../assets/svg/arrow-down-select.svg")
+.category__ordenation select
+    background-image svg-inline(arrowdownselect)
+    background-size: auto
+    background-position: 90% center
+    background-repeat: no-repeat
+
+@svg-load filtercategory url("../assets/svg/filter-category.svg")
+.category__btn-icon
+    background-image svg-inline(filtercategory)
+    background-size: auto
+    background-position: center
+    background-repeat: no-repeat
+    width: 18px
+    height 18px
+    margin-right: 8px
+
+.category__filter-close
+    background-image svg-inline(arrowmenuclose)
+    background-size: auto
+    background-position: center
+    background-repeat: no-repeat

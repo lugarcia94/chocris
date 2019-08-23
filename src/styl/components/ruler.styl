@@ -1,0 +1,81 @@
+.ruler
+    .info__list
+        border: 1px solid $cor01
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        padding: 25px 20px 
+        margin-bottom 40px
+
+        li  
+            display: flex
+            align-items: center 
+
+            @media(max-width: 992px)
+                justify-content: center
+
+            span
+                font-size: 14px
+                line-height: 16px
+                color: #6D6A5C
+                text-shadow: 0 0
+            
+            &:nth-child(1)
+                &:before
+                    @extend $ico-before
+                    // background-image svg-inline(r1)
+                    transition: $transition
+                    width: 35px
+                    height: 35px
+                    background-size: 35px
+                    margin-right 5px
+
+            &:nth-child(2)
+                &:before
+                    @extend $ico-before
+                    // background-image svg-inline(r2)
+                    transition: $transition
+                    width: 35px
+                    height: 35px
+                    background-size: 35px
+                    margin-right 5px
+
+            &:nth-child(3)
+                &:before
+                    @extend $ico-before
+                    // background-image svg-inline(r3)
+                    transition: $transition
+                    width: 35px
+                    height: 35px
+                    background-size: 24px
+                    margin-right 5px
+
+            &:nth-child(4)
+                &:before
+                    @extend $ico-before
+                    // background-image svg-inline(r4)
+                    transition: $transition
+                    width: 35px
+                    height: 35px
+                    background-size: 35px
+                    margin-right 5px
+
+            &:nth-child(5)
+                &:before
+                    @extend $ico-before
+                    // background-image svg-inline(r5)
+                    transition: $transition
+                    width: 35px
+                    height: 35px
+                    background-size: 35px
+                    margin-right 5px  
+
+            strong  
+                display: block
+                text-transform: uppercase
+                color: $cor01
+                
+
+.slick-dots li button:before
+    display: none!important

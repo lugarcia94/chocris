@@ -1,0 +1,229 @@
+.showcase
+    padding-top: 60px
+    @media(max-width : 991px)
+        padding: 0
+    @media(max-width : 599px)
+        padding-bottom: 55px
+    &__container
+        max-width: 1330px
+        padding: 0 15px
+        width: 100%
+        margin: 0 auto
+    &__title
+        font-size: 35px
+        color: #434343
+        line-height: 32px
+        text-align: center
+        text-transform: uppercase
+        font-weight: 900
+        display flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 30px
+        &:before, &:after 
+            content: ''
+            height 1px
+            background: #FFF115
+            display: block
+            width: 100%
+        @media(max-width : 767px)
+            font-size: 20px
+        span 
+            white-space: nowrap
+            padding: 0 12px
+    &__list
+        .spot
+            width: 100%
+            max-width: 246px
+            float: none
+            margin: 0 auto
+            padding: 0 15px
+            border: 1px solid transparent
+            @media(max-width : 991px)
+                padding: 5px
+            &:hover
+                border: 1px solid #CBCBCB
+                .botoesSpot
+                    opacity 1
+                    visibility: visible
+        .spot__request
+            .spotPreco, .botoesSpot
+                *
+                    opacity 0
+                    visibility hidden
+            .spotPreco:before
+                content: 'Preço sob consulta'
+                display: block
+                text-align: center
+                border: 1px solid #CBCBCB
+                font-size: 12px
+                line-height: 24px
+                color: #373535
+                font-weight: bold
+                height 24px
+                max-width: 124px
+                margin: 0 auto
+                margin-top: 3px
+
+        .etiquetas-spot
+            top: 10px
+            left -15px
+            @media(max-width : 991px)
+                left 0px
+        .fbits-etiqueta-off
+            background: #FF5D5D
+            height 30px
+            font-size: 12px
+            color: #ffffff
+            font-weight: 900
+            line-height: 30px
+            width: 60px
+        .fbits-etiqueta-fretegratis
+            height 20px
+            background: #4AC87A
+            width: 80px
+            font-size: 10px
+            color: #ffffff
+            font-weight: 800
+            line-height: 20px
+            height 20px!important
+            width: auto!important
+            border-radius: 0
+
+            &:before
+                content: 'FRETE GRÁTIS'
+                font-size: 10px
+            img
+                display: none!important
+        .fbits-spot-conteudo
+            height auto
+            padding-bottom: 15px
+        .spotPreco
+            margin-top: 5px
+        .precoDe
+            font-size: 12px
+            color: #ADADAD
+            font-weight: bold
+            line-height: 15px
+            margin-bottom: 2px
+        .precoParcela
+            display: flex;
+            align-items: center
+            justify-content: center
+            >*
+                margin: 0 2px
+            &:before
+                content: 'ou'
+            &:after
+                content: 'sem juros'
+        .precoPor
+            font-size: 18px
+            color: #373535
+            font-weight: 800
+            line-height: 23px
+            &:before
+                display: none
+        .fbits-spot-preco-boleto-container
+            font-size: 14px
+            color: #373535
+            line-height: 18px
+            font-weight: bold
+            .fbits-spot-boleto-ou
+                margin-right: 3px
+                &:before
+                    content: 'ou'
+            .fbits-spot-boleto-off
+                margin-left: 3px
+                &:before
+                    content: 'no boleto'
+            .fbits-spot-boleto-valor
+                font-size: 21px
+                color: #FF5D5D
+                font-weight: 900
+                line-height: 26px
+        .spotImg
+            img 
+                width: auto!important
+                max-width: 100%
+                margin: 0 auto
+                display: block
+        .spotTitle
+            font-size: 12px
+            color: #434343
+            font-weight: bold
+            line-height: 15px
+            text-align: center
+            text-transform: uppercase
+            height 50px
+            overflow hidden
+        .botoesSpot
+            display: block
+            opacity 0
+            visibility: hidden
+            height 30px
+            overflow hidden
+            @media(max-width : 991px)
+                display: none
+            &--spotIndisponivel
+                height: auto
+                padding: 10px 0
+                font-size: 0.75rem
+                color: #434343
+                font-weight: bold
+                line-height: 0.94rem
+                text-align: center
+                text-transform: uppercase
+                input 
+                    color: #434343
+                    &#btnEnviarAviseMe
+                        border: 1px solid #ddd
+                        background: #ddd
+                        height 2.5rem
+                        cursor: pointer
+                        transition: all .3s
+                        &:hover
+                            background: #ffffff
+            a
+                color: #4AC87A
+                border: 1px solid #4AC87A
+                background: none
+                font-size: 12px!important
+                line-height: 30px!important
+                text-align: center
+                font-weight: bold
+                height 30px!important
+                float: none
+                transition: all .3s
+                width: 91.15%!important
+                &:hover
+                    color: #ffffff
+                    background: #4AC87A
+
+    .slick-next
+        @media(max-width : 1360px)
+            right 0
+        @media(max-width : 991px)
+            width: 30px
+            height 30px
+            top: 30%
+    .slick-prev
+        @media(max-width : 1360px)
+            left 0
+        @media(max-width : 991px)
+            width: 30px
+            height 30px
+            top: 30%
+    
+    .slick-dots
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-wrap: wrap
+        li
+            width: 10px
+            height: 10px
+            background: #E7E7E7
+        .slick-active
+            width: 14px
+            height: 14px
+            background: #FFF115

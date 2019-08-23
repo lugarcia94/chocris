@@ -1,0 +1,91 @@
+.product__zoom
+    width: 100%
+    max-width: 620px
+    display: flex
+    justify-content: space-between
+    align-items: flex-start 
+    position relative
+
+    @media(max-width: 1250px)
+        max-width 45%
+
+    @media(max-width: 992px)
+        max-width 100%
+
+        .fbits-componente-imagem
+            display: none
+  
+    .verDetalhes
+        display: none
+
+    .etiqueta__produto
+        z-index: 1    
+
+        #fbits-div-preco-off
+            display: block!important
+            
+
+.product__price
+    .fbits-comprar 
+        display: none
+
+
+.product__tag
+    position: absolute
+    right 15px
+    top: 15px
+    z-index 1
+
+.fbits-componente-imagem
+    max-width 530px
+
+    iframe 
+        width 100%
+
+    @media(max-width: 1250px)
+        max-width 100%
+
+    @media(max-width 991px)
+        margin: 0 auto
+ 
+
+#galeria 
+    a  
+ 
+        img     
+            @media(max-width 992px)
+                max-width 100%!important 
+
+    .slick-next, .slick-prev 
+        position: absolute
+        background-color: transparent
+
+    .slick-arrow
+        width 85px!important
+        height 30px
+
+    .slick-next
+        bottom -20px
+        font-size: 0
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAb1BMVEU3NTU4NjY8Ojo+PDxAPz9EQkJNS0tNTExPTU1WVFRXVlZYV1ddXFxjYmJmZGRoZ2dxb292dXWCgYGenZ2goKCtrKyurq62tbW7urrFxcXJycnV1dXW1tbX1tbX19fd3d3e3d3i4uLl5eXm5ubn5+egRI/DAAAAWElEQVR42u3SNwKAIBBE0cGEOeccuP8ZResFWwt++4qdYiG0GX4a7ULHHeI/8uy2L29pcBI8gdWSlxA+xaJiyOBxRCt9u7EgS3bVtN4B8kO9fODlZX7tm2+cA3hzzXVikAAAAABJRU5ErkJggg==')!important
+        transform: scale(1)!important 
+        background-position: center
+
+        @media(max-width: 992px)
+            right -20px!important 
+            transform: rotate(-90deg)!important
+            bottom: 0!important 
+            top: 50%
+
+    .slick-prev
+        top: -40px
+        font-size: 0
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAAb1BMVEU3NTU4NjY8Ojo+PDxAPz9EQkJNS0tNTExPTU1WVFRXVlZYV1ddXFxjYmJmZGRoZ2dxb292dXWCgYGenZ2goKCtrKyurq62tbW7urrFxcXJycnV1dXW1tbX1tbX19fd3d3e3d3i4uLl5eXm5ubn5+egRI/DAAAAWElEQVR42u3SNwKAIBBE0cGEOeccuP8ZResFWwt++4qdYiG0GX4a7ULHHeI/8uy2L29pcBI8gdWSlxA+xaJiyOBxRCt9u7EgS3bVtN4B8kO9fODlZX7tm2+cA3hzzXVikAAAAABJRU5ErkJggg==')!important
+        transform: scale(-1) 
+        background-position: center
+
+        @media(max-width: 992px)
+            left -20px!important 
+            transform: rotate(90deg)!important
+            bottom: 0!important 
+            top: 50%
