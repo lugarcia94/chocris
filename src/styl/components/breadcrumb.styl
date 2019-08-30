@@ -21,20 +21,19 @@
         display inline
 
         &:after
-            content: '/'
+            content: ''!important
             display: inline-block 
-            background-position: center center
-            background-repeat: no-repeat  
-            background-size: 7px
+            border-radius 50%
+            width 5px
+            height 5px
+            background #808080
             vertical-align: middle
-            font-size: 15px
-            color: #333333
+            margin 0 5px
             
         &:last-child
             a
-                font-weight: 400
                 margin: 0
-                color: #333333
+                color: #808080 !important
 
             &:after
                 display: none
@@ -44,11 +43,12 @@
             display inline
             height: 15px
             text-decoration: none
-            font-size: 13px!important
-            color: #333333
+            font-size: 12px!important
+            color: #808080
             transition: all 150ms ease-in-out
             vertical-align: middle
             font-weight: 400
+            text-transform : lowercase
    
     h1
         display inline!important
