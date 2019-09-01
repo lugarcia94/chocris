@@ -195,10 +195,10 @@
     .product__price 
         position relative
         border: 1px solid #E7E7E7
+        border-width 1px 0
         padding: 20px 15px
         display: flex
-        flex-wrap: wrap
-        flex-direction: column
+        align-items center
 
         .product__boleto
             order: 1
@@ -880,7 +880,7 @@ div#fbits-avaliar-produto
                 display: block
 
 .product__offer
-    max-width 300px
+    max-width 400px
     width 100% 
     position: static!important
     @media(min-width 991px)
@@ -1271,7 +1271,7 @@ section.showcase__one.showcase__list .showcase__container
  
 
 .fbits-comprar
-    display: none!important
+    display: block!important
 
 .btAvaliar
     @media(max-width: 425px)
@@ -1419,4 +1419,11 @@ section.showcase__one.showcase__list .showcase__container
         color #0D0F0F
         background #F7F7F7
         padding 15px
+
+
+.product
+    &__content
+        max-width 607px
+        width 100%
+        margin  0 auto
           
