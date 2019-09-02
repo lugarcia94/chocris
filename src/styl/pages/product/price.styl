@@ -489,13 +489,16 @@
     float: none
 
 .addthis_inline_share_toolbox 
-    margin-top: 75px
+    display flex
+    align-items: center
+    margin-top: 45px
+
 
     &:before
-        content: 'Compartilhe nas redes sociais'
-        color: #333
-        font-weight: 600
-        font-size: 15px
+        content: 'compartilhar'
+        color: #818181
+        font-weight: 500
+        font-size: 12px
 
     #atstbx
         margin-top 5px
@@ -541,19 +544,20 @@ div#divGrupoProduto ul:nth-child(3)
         text-decoration: none
         background: darken(#4ac87a, 20%)
 
+.product__adicionar-sacola
+    .btn-comprar
+        background: #377F4F
+        border 1px solid #377F4F
+        color: #ffffff
+
+.product__adicionar-lista
+    .btn-comprar
+        background: #ffffff
+        border 1px solid #0D0F0F
+        color: #0D0F0F
+        margin-bottom 15px
+
 .btn-comprar
-    background: #377F4F
-    border 1px solid #377F4F
-    color: #ffffff
-
-.addCarrinho
-    background: #ffffff
-    border 1px solid #0D0F0F
-    color: #0D0F0F
-    margin-bottom 15px
-
-.btn-comprar,
-.addCarrinho
    
     cursor: pointer
  
@@ -616,11 +620,12 @@ div#divGrupoProduto ul:nth-child(3)
         display: block
         
 .product__parcelamento
+    position relative
+
     .fbits-parcelamento-padrao
         padding-top 0
         
         .summary.fbits-summary.summaryDesktop
-            
             color: #DEA345
             text-decoration: none
             font-weight: 500 
@@ -631,6 +636,7 @@ div#divGrupoProduto ul:nth-child(3)
             align-items: center  
             padding: 0 
             font-size: 11px
+            margin 0 !important
 
             &:before
                 display none
@@ -646,4 +652,10 @@ div#divGrupoProduto ul:nth-child(3)
                 padding: 0
                 margin-left: 5px
 
-    
+    .details
+        margin 0
+
+    .details-content
+        position absolute 
+        top 100%
+        background #ffffff
