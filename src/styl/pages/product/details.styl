@@ -9,13 +9,15 @@
         max-width 24%
 
     .product__details-topo
-        flex: 0 0 100%
+        flex: 0 0 400px
 
         @media(max-width: 992px)
             display: flex
             flex-wrap: wrap
             justify-content: space-between
             max-width 100%
+            flex 1 1 auto
+            min-width 0px
 
             .product__reviews
                 width 100%
@@ -61,15 +63,15 @@
             max-width 100%
     
     .right__product--sticky
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
+        position: -webkit-sticky
+        position: sticky
+        top: 0
 
     .left__prod
         padding-top 15px
 
     @media(max-width: 991px)
-        max-width 45%
+        max-width 100%
         margin: 0
         margin-top 20px
 
@@ -203,9 +205,23 @@
 
 
 .product__shipping
-    display: inline-block 
+    display: flex   
+    position: relative
+    align-items: center
+    justify-content: space-between
     width: 100%
- 
+
+    &--title
+        font-size 12px
+        font-weight 500
+        color #DEA345
+        cursor pointer
+
+    &--content
+        position absolute
+        top 100%
+        display none
+
     .details-content
         display: flex !important
         flex-wrap: wrap

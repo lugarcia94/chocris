@@ -1416,16 +1416,24 @@ section.showcase__one.showcase__list .showcase__container
 .content.produto
     border-top: 1px solid #F3F3F3 
 
-.descricao
-    &__title
-        color #0D0F0F
-        background #F7F7F7
-        padding 15px
-
-
 .product
     &__content
         max-width 607px
         width 100%
         margin  0 auto
-          
+        padding 10px 0
+
+    &__tabs
+        margin-bottom 10px
+
+        &--content
+            opacity 0
+            height 0
+            visibility hidden            
+        
+        &--title
+            display block
+            cursor pointer
+            color #0D0F0F
+            background #F7F7F7
+            padding 15px
