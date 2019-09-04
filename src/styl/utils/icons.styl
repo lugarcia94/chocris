@@ -84,11 +84,7 @@ $ico-before
         display: block
 
 @svg-load lupa url("../assets/svg/lupa.svg")
-input.inputSearch
-    background-image svg-inline(lupa)
-    background-size: auto
-    background-position: 3% center
-    background-repeat: no-repeat
+ 
 
 @svg-load user url("../assets/svg/user.svg")
 @svg-load box url("../assets/svg/box.svg")
@@ -172,17 +168,18 @@ input.inputSearch
 @svg-load right url("../assets/svg/arrow-right.svg")
 @svg-load left url("../assets/svg/arrow-left.svg")
 .slick-prev.slick-arrow
-    background-image svg-inline(left)!important
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAAIVBMVEUAAAANDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8Fw7jdAAAACnRSTlMAESIzVWZ3mczdO/WiZgAAACpJREFUGNNjYGZlQAB2LjYEh5FjAHlMnFwsSGy4BCMym4M6bFRvMyEFCAAhDAIDByVsSgAAAABJRU5ErkJggg==')!important
     background-size: auto!important
     background-position: center!important
     background-repeat: no-repeat!important
     width: 40px
     height 40px
     z-index: 9
+    transform: scale(-1)
     &:before
         display: none
 .slick-next.slick-arrow
-    background-image svg-inline(right)!important
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAMAAADD5o0oAAAAIVBMVEUAAAANDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8Fw7jdAAAACnRSTlMAESIzVWZ3mczdO/WiZgAAACpJREFUGNNjYGZlQAB2LjYEh5FjAHlMnFwsSGy4BCMym4M6bFRvMyEFCAAhDAIDByVsSgAAAABJRU5ErkJggg==')!important
     background-size: auto!important
     background-position: center!important
     background-repeat: no-repeat!important
@@ -266,3 +263,12 @@ span.arrowmenu
     background-size: auto
     background-position: center
     background-repeat: no-repeat
+
+.full__banner
+    .slick-prev.slick-arrow
+        left 15%
+
+    .slick-next.slick-arrow
+        right 15%
+
+ 

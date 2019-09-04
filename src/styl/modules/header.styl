@@ -1,39 +1,36 @@
 .header
-    position: fixed
-    top: 0
-    left: 0
+
     width: 100%
     z-index: 99
     display: flex
     flex-wrap: wrap
     &__topbar
-        background-color: #333333
-        padding: 12px 0
+        background-color: #f7f7f7 
         width: 100%
         transition: all .3s
-        @media(max-width : 991px)
-            order: 1
+ 
         &-container
-            max-width: 1330px
-            padding: 0 15px
+            max-width: 1920px 
             width: 100%
-            margin: 0 auto
+            padding 0 30px
+            margin: 0 auto 
+            display flex
+            align-items: center
+            justify-content: space-between
+            border-bottom: 1px solid #e0e0e0
+
+        &-links
             display: flex
             align-items: center
             justify-content: space-between
-            @media(max-width : 1249px)
-                justify-content: flex-end
-        &-list
-            padding-left: 220px
+            width 20%
+
+        &-list 
             display: flex
             align-items: center
             justify-content: space-between
-            @media(max-width : 1249px)
-                max-width: 55%
-                padding: 0
-            @media(max-width : 991px)
-                max-width: 100%
-                padding: 0 30px
+            width 58%
+
         .slick-prev
             left 0
             width: 30px
@@ -42,20 +39,55 @@
             right 0
             width: 30px
             height 30px
-        &-item
-            padding-right: 35px
-            font-size: 12px
-            line-height: 15px
-            font-weight: 800
-            color: #FFFFFF
+
+        span.minicart-txt-itens 
+            display: none
+
+        #fbits-resumo-carrinho
+            a
+                display flex
+                align-items: center
+            i
+                width 15px
+                height 15px
+                margin-right 3px
+                &:before
+                    display none
+                
+                &:after
+                    content: ''
+                    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAPCAMAAADjyg5GAAAAKlBMVEUAAAANDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8MH+gxAAAADXRSTlMAESJEVWZ3iKq7zN3u3UzIpwAAAElJREFUeAGlx8EVAiAMRMGFECTC779dFYOPu3MbfbVW9GML8LOyiADLOiF1RrbTJSP0Vrm0XQd4TPDd8Wms7PFvNa9WqcZMT9MLfZ4G/8dcLuMAAAAASUVORK5CYII=')
+                    display: block
+                    width: 15px
+                    height: 15px
+                    background-repeat: no-repeat
+
+            .minicart-qtde-itens
+                font-size 10px
+                text-shadow 0 0 
+                &:before, &:after
+                    display none
+                    
+
+        &-item 
+            font-size: 9px
+            line-height: 12px
+            font-weight: 400
+            color: $cor01
             display: flex!important
             align-items: center
-            @media(max-width : 1300px)
-                padding-right: 15px
-            @media(max-width : 1249px)
-                justify-content: center
-            @media(max-width : 991px)
-                padding: 0
+            letter-spacing: 1px
+            text-shadow 0 0
+
+            a
+                font-size 9px
+                color #0d0f0f
+                text-shadow 0 0 
+                letter-spacing: 1px
+
+                &:hover
+                    color: $cor01
+ 
             &--two
                 @media(max-width : 991px)
                     font-size: 0px
@@ -86,18 +118,18 @@
         position: relative
         z-index: 1
         width: 100%
-        @media(max-width : 991px)
-            background:  linear-gradient( #333333 50px, white 50px, white 100px, white 100px, white 150px, white 150px)
-            min-height: 80px
+ 
         &-container
-            max-width: 1330px
-            padding: 0 15px
+            max-width: 1920px 
             width: 100%
-            margin: 0 auto
+            padding 0 30px
+            margin: 0 auto 
         &-wrapper
             display: flex
             align-items: center
             justify-content: space-between
+            min-height: 70px
+
             @media(max-width : 991px)
                 flex-wrap: wrap
         &-mobile
@@ -108,33 +140,11 @@
                 height 22px
         &-logo
             position: relative
-            height: 70px
-            width: 190px
-            min-width: 190px
-            margin-right: 35px
-            @media(max-width : 991px)
-                width: 138px
-                min-width: 138px
-                height: 50px
-                margin: 0
+     
             .headerLogo
-                position: absolute
-                float: none
-                width: auto
-                bottom: 0
-                left: 0
-                @media(max-width : 991px)
-                    top: 0
-            img 
-                display: block
-                width: auto
-                margin: 0
-                padding: 0
-                max-width: none
-                @media(max-width : 991px)
-                    height 80px
+                width 100%
         &-serach
-            max-width: 630px
+            max-width: 150px
             width: 100%
             @media(max-width : 991px)
                 max-width: 100%
@@ -147,27 +157,25 @@
                 float: none
                 margin: 0
             input.inputSearch
-                border: 1px solid #E7E7E7
+                border: none!important
+                border-bottom 1px solid #dadada!important
                 font-size: 15px
-                color: #BABABA
-                padding-left: 35px
+                color: #dadada 
+                padding 0!important  
                 &::placeholder
-                    font-size: 15px
-                    color: #BABABA
+                    font-size: 0 
             button#btnBusca.btSearch
-                background: #373535
-                font-size: 13px
-                color: #FFF115
-                text-align: center
-                font-weight: 800
-                width: auto
-                height 100%
-                padding: 12px
-                transition: all .3s
-                &:hover
-                    color: #ffffff
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAMAAADarb8dAAAAMFBMVEUAAAANDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8eckFMAAAAD3RSTlMAESIzRFVmd4iZqrvM3e5GKvWZAAAAY0lEQVR42m2OQQ7AIAgEqQWRtrr//22rIl46B9dMNhtowFkO2uSGDwtV8AizobphmOc1xV2jmXocKC5O5B4J6mL9YLsxN5qvG9JaH0aiqqgq+UYcQvwAaKrbUOLze90Ev6bQC7vxA2wecYEnAAAAAElFTkSuQmCC')
+                background-repeat: no-repeat
+                position: absolute
+                right: 0
+                bottom: 4px!important
+                background-position: bottom
+                height: auto
+
                 .icon.isearch
                     display: none
+
         &-account, &-order, &-contact
             border-right: 1px solid #D8D8D8
             padding: 12px 20px
@@ -216,3 +224,9 @@
                     top: -7px
                     &:before, &:after
                         display: none
+
+form#searchFormHeader, form#searchFormMobile, form#searchFormFooter
+    padding-right: 20px
+
+a.active__menu
+    color: $cor01!important
