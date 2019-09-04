@@ -63,7 +63,11 @@
             margin: 0!important
             display: block!important
             padding: 0 30px!important
-            min-width: 0px
+            min-width: 0px 
+            min-height: 0!important
+            line-height: 12px!important
+            height: auto!important
+
             @media(max-width : 991px)
                 padding: 0!important
                 width: 100%
@@ -249,8 +253,8 @@
 
             a
                 color: #373535
-                font-size: 13px
-                line-height: 15px 
+                font-size: 11px
+                line-height: 13px 
                 font-weight: 400  
                 display: flex
                 align-items: center
@@ -259,6 +263,9 @@
                 width: 100%
                 text-align: center
                 padding: 0
+                border: none!important
+                min-height: 0
+                height: auto
 
                 &:hover
                     color $cor01

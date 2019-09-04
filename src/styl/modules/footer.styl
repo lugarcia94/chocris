@@ -1,8 +1,8 @@
 .footer
     &__informations
-        background: #F4F4F4
+        background: #f7f7f7
     &__container
-        max-width: 1330px
+        max-width: 1190px
         padding: 0 15px
         width: 100%
         margin: 0 auto
@@ -10,7 +10,7 @@
         display: flex
         justify-content: space-between
         flex-wrap: wrap
-        padding: 35px 0
+        padding: 50px 0
         @media(max-width: 475px)
             display: block
             text-align: center
@@ -20,20 +20,20 @@
         @media(max-width: 475px)
             padding-bottom: 60px
     &__title
-        color: #434343
-        font-size: 13px
-        font-weight: bold
-        line-height: 16px
-        text-transform: uppercase
-        margin-bottom: 10px
+        color: #0d0f0f
+        font-size: 12px
+        font-weight: 600
+        line-height: 14px 
+        margin-bottom: 5px
     &__link
-        color: #434343
-        font-size: 13px
-        font-weight: 500
-        line-height: 20px
+        color: #7f7f7f
+        font-size: 10px
+        font-weight: 400
+        line-height: 14px
         transition: all .3s
         &:hover
-            text-decoration: underline
+            text-decoration: none
+            color $cor01
     &__info
         display: block
         color: #434343
@@ -125,3 +125,78 @@
                 padding-top: 30px
 #headerLoginMaster
     display: none!important
+
+.social__footer
+    display: flex
+    align-items: center
+    max-width: 200px
+    width: 100%
+    justify-content: space-between
+
+    .facebook
+        display block 
+    	img
+            width 15px
+            height 15px
+        
+
+    .insta
+        display block
+        img
+            width 15px
+            height 15px
+
+.footer__seals 
+    border-top: 1px solid #e0e0e0
+    border-bottom: 1px solid #e0e0e0
+    padding: 30px 15px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width 1190px
+    margin 0 auto
+
+    span
+        font-size 10px
+        display: flex
+        align-items: center
+        color #808080
+        
+        img
+            margin-left 10px
+            max-width  110px
+        
+
+.footer__copyright 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    margin: 40px auto
+    max-width: 1190px
+    padding: 0 15px
+
+
+    span,a 
+        font-size 9px
+        display: flex
+        align-items: center
+        color #808080
+
+    img
+        margin-left 10px
+        
+    .agency
+        img
+            max-width 50px
+
+    .platform
+        img
+            max-width 40px
+
+    .footer__copyright-links 
+        display: flex
+        align-items: center
+        max-width: 300px
+        width: 100%
+        justify-content: space-between
