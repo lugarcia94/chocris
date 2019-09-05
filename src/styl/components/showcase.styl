@@ -5,6 +5,9 @@
         padding: 0 30px
         width: 100%
         margin: 0 auto
+
+        @media(max-width 991px)
+            padding 0 15px
     &__title
         font-size: 20px
         color: #000000
@@ -16,8 +19,16 @@
         justify-content: center
         margin-bottom: 30px
 
+        @media(max-width 991px)
+            font-size 18px
+
         strong
             text-transform uppercase
+
+            @media(max-width 991px)
+                display block
+                font-weight 700
+                font-size 18px
  
     &__list
         .spot
@@ -197,14 +208,29 @@
         @media(max-width : 991px)
             width: 30px
             height 30px
-            top: 30%
+            top: 50%
+            transform translateY(-50%)
+            background-color: #ffffff!important
+            border-radius: 50%
+            width: 100px
+            height: 100px
+            right: -70px
+            background-position: 26%!important
+            z-index 9999
     .slick-prev
         @media(max-width : 1360px)
             left 0
         @media(max-width : 991px)
             width: 30px
             height 30px
-            top: 30%
+            top: 50%
+            transform translateY(-50%) scale(-1)
+            background-color: #ffffff!important
+            border-radius: 50%
+            width: 100px
+            height: 100px
+            left: -70px
+            background-position: 26%!important
     
     .slick-dots
         display: flex

@@ -134,49 +134,7 @@ $(document).ready(function(){
     $( ".botoesSpot .spotTelevendas" ).each(function() {
         $(this).closest(".spot").addClass("spot__request");
     });
-
-    if ($(window).width() < 1250){
-        $('.header__topbar-list').slick({
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            arrows: false,
-            responsive: [
-                {
-                  breakpoint: 1030,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                  }
-                },
-                {
-                  breakpoint: 992,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    arrows: true
-                  }
-                },
-                {
-                  breakpoint: 650,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    arrows: true
-                  }
-                },
-                {
-                  breakpoint: 490,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: true
-                  }
-                }
-            ]
-        });
-    }
+ 
 });
 
 $( document ).ajaxComplete(function(event, xhr, settings) {

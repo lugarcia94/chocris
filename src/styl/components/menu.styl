@@ -317,3 +317,34 @@
             height 100%
             background-color:rgba(0,0,0,0.75)
             z-index -1
+
+.only__mobile
+    display none
+
+@media(max-width 991px)
+    .header__mainbar-menu
+        display none!important
+
+    .carrinho.carrinhoHead
+        right 0
+        width auto!important
+
+    #searchFormHeader
+        display none
+
+    .headerSearch
+        width auto!important
+
+        &:before
+            content ''
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAMAAADarb8dAAAAMFBMVEUAAAANDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8eckFMAAAAD3RSTlMAESIzRFVmd4iZqrvM3e5GKvWZAAAAY0lEQVR42m2OQQ7AIAgEqQWRtrr//22rIl46B9dMNhtowFkO2uSGDwtV8AizobphmOc1xV2jmXocKC5O5B4J6mL9YLsxN5qvG9JaH0aiqqgq+UYcQvwAaKrbUOLze90Ev6bQC7vxA2wecYEnAAAAAElFTkSuQmCC')
+            display: block
+            width: 30px
+            height: 30px
+            background-repeat: no-repeat
+            background-size: auto
+            background-position center
+
+
+    .only__mobile
+        display block

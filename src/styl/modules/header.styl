@@ -20,11 +20,17 @@
             border-bottom: 1px solid #e0e0e0
             min-height 27px
 
+            @media(max-width 991px)
+                padding 0 15px
+
         &-links
             display: flex
             align-items: center
             justify-content: space-between
             width 18%
+
+            @media(max-width 991px)
+                display none
 
         &-list 
             display: flex
@@ -32,6 +38,8 @@
             justify-content: space-between
             width 59%
 
+            @media(max-width 991px)
+                width 100%
         .slick-prev
             left 0
             width: 30px
@@ -41,57 +49,7 @@
             width: 30px
             height 30px
 
-        span.minicart-txt-itens 
-            display: none
-
-        #fbits-resumo-carrinho
-            a
-                display flex
-                align-items: center
-            i
-                width 15px
-                height 15px
-                line-height: 0
-                font-size: 0
-                float: none
-                margin: 0
-                &:before
-                    display none
-                
-                &:after
-                    content: ''
-                    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAMAAABl5a5YAAAAHlBMVEUAAAANDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw9/szn7AAAACXRSTlMAESIzRKq7zN3AOteQAAAAT0lEQVR42rWPwQ6AMAjF2GCy/v8PO3FuePBoDy9pEw7IpBTJmINbcoJdnEPV8XUPKqJQQms1sGeH86JGaI3Yr7D5L0jP3q9Xe3K9v1kMOQFPAgZ7WEGuvQAAAABJRU5ErkJggg==')
-                    display: block
-                    width: 15px
-                    height: 15px
-                    background-repeat: no-repeat
-                    background-size: 10px
-                    background-position center
-
-            .minicart-qtde-itens
-                font-size 8px!important
-                text-shadow 0 0 
-                height: auto!important
-                line-height: 0!important
-                font-family 'Muli'
-                color #0d0f0f
-                line-height: 0 !important;
-                font-family: 'Muli';
-                color: #0d0f0f;
-                padding: 0;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                position: relative;
-                float: none;
-                width: 15px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-top 3px
-
-                &:before, &:after
-                    display none
+        
                 
         &-item 
             font-size: 8px
@@ -102,6 +60,15 @@
             align-items: center
             letter-spacing: .5px
             text-shadow 0 0
+
+            @media(max-width 767px)
+                display none!important
+
+            &:first-child
+                @media(max-width 767px)
+                    display flex!important
+                    margin 0 auto
+                    font-size 10px
 
             a
                 font-size 8px
@@ -148,6 +115,9 @@
             width: 100%
             padding 0 30px
             margin: 0 auto 
+            
+            @media(max-width 991px)
+                padding 0 15px
         &-wrapper
             display: flex
             align-items: center
@@ -156,6 +126,13 @@
 
             @media(max-width : 991px)
                 flex-wrap: wrap
+                position relative
+
+                > div, a
+                    min-width 35px
+                    display: flex
+                    align-items: center
+                    justify-content: center
         &-mobile
             display: none
             @media(max-width : 991px)
@@ -175,12 +152,12 @@
             max-width: 150px
             width: 100%
             margin-top -20px
-            @media(max-width : 991px)
-                max-width: 100%
-                order 1
-                padding-bottom: 11px
-                padding-top: 31px
-                transition: all .3s
+
+            @media(max-width: 991px)
+                max-width none
+                width auto
+                margin 0
+
             .headerSearch
                 width: 100%
                 float: none
@@ -262,3 +239,69 @@ form#searchFormHeader, form#searchFormMobile, form#searchFormFooter
 
 a.active__menu
     color: $cor01!important
+
+span.minicart-txt-itens 
+    display: none!important
+
+#fbits-resumo-carrinho
+    a
+        display flex
+        align-items: center
+    i
+        width 15px
+        height 15px
+        line-height: 0
+        font-size: 0
+        float: none
+        margin: 0
+
+        @media(max-width 991px)
+            width 20px
+            height 30px
+
+        &:before
+            display none
+        
+        &:after
+            content: ''
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAMAAABl5a5YAAAAHlBMVEUAAAANDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw8NDw9/szn7AAAACXRSTlMAESIzRKq7zN3AOteQAAAAT0lEQVR42rWPwQ6AMAjF2GCy/v8PO3FuePBoDy9pEw7IpBTJmINbcoJdnEPV8XUPKqJQQms1sGeH86JGaI3Yr7D5L0jP3q9Xe3K9v1kMOQFPAgZ7WEGuvQAAAABJRU5ErkJggg==')
+            display: block
+            width: 15px
+            height: 15px
+            background-repeat: no-repeat
+            background-size: 10px
+            background-position center
+
+            @media(max-width 991px)
+                background-size: auto
+                width 20px
+                height 30px
+
+    .minicart-qtde-itens
+        font-size 8px!important
+        text-shadow 0 0 
+        height: auto!important
+        line-height: 0!important
+        font-family 'Muli'
+        color #0d0f0f
+        line-height: 0 !important;
+        font-family: 'Muli';
+        color: #0d0f0f;
+        padding: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        position: relative;
+        float: none;
+        width: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top 3px
+
+        @media(max-width 991px)
+            font-size 12px!important 
+
+        &:before, &:after
+            display none
+

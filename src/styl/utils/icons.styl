@@ -208,7 +208,7 @@ $ico-before
 
 @svg-load menumobile url("../assets/svg/menu-mobile.svg")
 .header__mainbar-mobile
-    background-image svg-inline(menumobile)
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAMAAAAR8Wy4AAAAD1BMVEUAAAANDw8NDw8NDw8NDw8UJ8puAAAABHRSTlMAIjNEDYAUrQAAAB5JREFUeAFjYGBiRgJMDAyMLCiAEUMAQwsGGLSGAgASUQJN5WPwsgAAAABJRU5ErkJggg==')
     background-size: auto
     background-position: center
     background-repeat: no-repeat
@@ -268,7 +268,13 @@ span.arrowmenu
     .slick-prev.slick-arrow
         left 15%
 
+        @media(max-width: 991px)
+            left 1%
+
     .slick-next.slick-arrow
         right 15%
+
+        @media(max-width: 991px)
+            right 1%
 
  

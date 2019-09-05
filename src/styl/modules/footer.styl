@@ -6,25 +6,46 @@
         padding: 0 15px
         width: 100%
         margin: 0 auto
+
+        @media(max-width: 767px)
+            padding 0
     &__wrapper
         display: flex
         justify-content: space-between
         flex-wrap: wrap
         padding: 50px 0
-        @media(max-width: 475px)
-            display: block
-            text-align: center
-            padding: 60px 0
-            padding-bottom: 0
-    &__column
-        @media(max-width: 475px)
-            padding-bottom: 60px
+        @media(max-width: 767px)
+            display: block 
+            padding: 30px 0 
+
     &__title
         color: #0d0f0f
         font-size: 12px
         font-weight: 600
         line-height: 14px 
         margin-bottom: 5px
+
+        @media(max-width: 767px)
+            border-top: 1px solid #e0e0e0 
+            margin 0
+            min-height 50px
+            display flex
+            align-items: center
+            font-size 14px
+            position relative
+            padding-left: 15px
+            
+            &:after
+                content: '+'
+                position absolute 
+                right 0
+                font-size 20px
+                width: 40px
+                height: 40px
+                display: flex
+                align-items: center
+                justify-content: center
+
     &__link
         color: #7f7f7f
         font-size: 10px
@@ -133,6 +154,15 @@
     width: 100%
     justify-content: space-between
 
+    @media(max-width 767px)
+        max-width: 100%
+        border-top: 1px solid #e0e0e0
+        padding-top 20px
+        justify-content center
+
+        > a
+            margin 0 15px
+
     .facebook
         display block 
     	img
@@ -200,3 +230,9 @@
         max-width: 300px
         width: 100%
         justify-content: space-between
+
+ul.footer__list
+    @media(max-width: 767px)
+        max-height 0
+        visibility hidden
+        opacity 0
