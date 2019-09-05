@@ -6,27 +6,28 @@
         @media(max-width : 991px)
             padding-top: 0px
             position: fixed
-            top: 0
+            top: 82px
             left: 0
             transition: all .3s
             transform: translate3d(-100%,0,0)
-            z-index 9
+            z-index 999
             background: none
         &-container
             max-width: 1330px
-            padding: 0 15px
+            padding: 0 
             width: 100%
             margin: 0 auto
             @media(max-width : 991px)
                 background: #ffffff
-                width: 255px
-                max-width 255px
+                width: 300px
+                max-width 300px
                 background: #ffffff
-                padding-top: 35px
+                padding-top: 0
                 margin: 0
                 height 100vh
                 max-height: 100vh
                 overflow: auto
+                border-top: 1px solid #d8d8d8
         &-wrapper 
             @media(max-width : 991px)
                 border: none
@@ -275,11 +276,12 @@
 
                 @media(max-width : 991px)
                     justify-content: flex-start
-                    height 65px!important
+                    height 50px!important
                     font-size: 12px
                     text-align: left
                     padding-right: 45px
                     display: flex!important
+                    padding-left 15px
  
         li.select
             @media(max-width : 991px)
@@ -332,6 +334,24 @@
     #searchFormHeader
         display none
 
+    .headerSearch.active__search
+        #searchFormHeader
+            display block
+            position: absolute;
+            width: 100%
+            left: 0
+            background: #fff
+            height: 40px
+            border: 1px solid #e0e0e0
+            top: 100%
+
+            input.inputSearch[type="text"]
+                height 40px!important
+
+            button#btnBusca.btSearch
+                background-size auto 
+                bottom 10px!important
+                right 10px!important
     .headerSearch
         width auto!important
 

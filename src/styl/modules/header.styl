@@ -1,9 +1,16 @@
 .header
-
     width: 100%
     z-index: 99
     display: flex
     flex-wrap: wrap
+
+    @media(max-width: 991px)
+        position fixed
+        top 0px
+        width 100%
+        left 0
+        z-index 99999
+        
     &__topbar
         background-color: #f7f7f7 
         width: 100%

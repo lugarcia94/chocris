@@ -13,6 +13,18 @@ $(document).ready(function(){
         $('.product__offer .product__boleto').append('<div class="product__economy">' + 'Economia de <span>' + (vlrDe - vlrDesc).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) + '</span> ' + resultado + '</div>');
       }
     };
+
+    $('.footer__title').on('click', function(){
+      $(this).parent().toggleClass('active__footer');
+    });
+
+    $('.headerSearch').on('click', function(e){
+        var element = e.target;  
+        $(this).addClass('active__search'); 
+    });
+
+ 
+     
     
     if( $(".category__products >span").length){
       $(".category__products >span").append("<div class='fbits-item-lista-spot fbits-item-lista-spot-empty'></div>")
