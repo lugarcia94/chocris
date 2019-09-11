@@ -82,12 +82,12 @@
         display: inline-block
 
     .fbits-produto-nome
-        font-size: 22px
+        font-size: 20px
         line-height: normal
         color: #000000
         text-transform: none
         width: 100%  
-        font-weight: 300 
+        font-weight: 400 
 
         @media(max-width: 767px)
             text-align: left
@@ -100,7 +100,7 @@
         font-size: 13px
 
     .fbits-sku
-        font-size 12px
+        font-size 10px
         font-weight: 400
         color: #7f7f7f
         text-align: right
@@ -209,33 +209,56 @@
     position: relative
     align-items: center
     justify-content: space-between
+    flex-wrap  wrap
     width: 100%
+    margin-top: 20px
 
     &--title
         font-size 12px
         font-weight 500
         color #DEA345
         cursor pointer
+        display flex
+        align-items: center
 
-    &--content
-        position absolute
-        top 100%
-        display none
+        &:before
+            content ''
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAANCAMAAAB4p3UoAAAALVBMVEUAAADeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0VadBMdAAAADnRSTlMAESIzRFVmd4iqu8zd7v+yXhgAAABdSURBVHjaZc/LDoAwCETR6UOQtsz/f66kVk3j3Uw4OwCxVcVd5pMvKXzTvEvkZRdHC9olKG9i1qhLvv5iQCJd7L7EyQKUPiBUVQpGF0SVw3ts98EDmGRniknnfO0CmtAHmBScrgsAAAAASUVORK5CYII=')
+            width: 15px
+            height: 15px
+            display: block;
+            background-repeat: no-repeat
+            background-size: 13px
+            background-position: center
+            margin-right 3px
+
+
+    &--content 
+        width 100% 
+        display: none
+        background #f7f7f7
+        padding 10px
+        margin-top 10px
+
+        > span
+            font-size 10px
+            color #0d0f0f
+            text-shadow 0 0 
+    
 
     .details-content
         display: flex !important
         flex-wrap: wrap
 
     #txtCalculaFreteProduto
-        border: 1px solid #E7E7E7
-        height: 40px
+        border: 1px solid #e0e0e0
+        height: 45px
         border-radius: 1px
-        width: 50%
+        width: 70%
         font-size: 15px
-        color: #979797
-
-        @media(max-width: 767px)
-            width 46%
+        color: #0d0f0f
+        background transparent
+ 
 
     .carrinhoInputBlock
         display: flex 
@@ -244,25 +267,28 @@
         position relative
         
     #btnCalculaFreteProduto
-        background: #373535
+        background: #1a1a1a
         color:#fff
         font-size: 18px
         font-weight: 700
         text-transform: none 
-        border: 1px solid #373535
-        height: 40px
-        width: 16%
+        border: 1px solid #1a1a1a
+        height: 45px
+        width: 25%
+        margin-left 5%
         text-transform: lowercase
         font-weight: 700 
 
     #naoSeiCep
         position: absolute
-        bottom: 0
+        top: -15px
         right: 0
-        font-size: 12px
-        color: #A9A9A9
-        font-weight: 700
+        font-size: 8px
+        color: #808080
+        font-weight: 400
+        text-shadow 0 0
         text-transform: none
+        text-decoration none
 
         @media(max-width: 767px)
             left 50%
@@ -280,19 +306,30 @@
         margin-top 0
         width: 34%
         padding: 0
+        display none
+ 
 
-        &:before
-            content: 'Calcule o frete'
-            text-transform: none
-            color: #333333
-            font-size: 14px
-            line-height: 17px 
-            font-weight: 600
+.on__frete
+    .product__shipping--content
+        display block
 
 .product__como-comprar
     font-size 12px
     font-weight 500
     color #DEA345
+    display flex
+    align-items: center
+
+    &:before
+        content ''
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAANCAMAAACq939wAAAAKlBMVEUAAADeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0Xeo0XYfY8vAAAADXRSTlMAESJEVWZ3iJmqu93ugtZE3gAAAFVJREFUCNdVzjkCwzAMxMCJ5ENUuP//bgqnMVoUAJjXNT3MTpKecGZP5s7JSLE3laGaT/Khl16MurG++uZK42690P2Yao7koJeRMqsOlfHuvA9w/t9+BqQDIffYILkAAAAASUVORK5CYII=')
+        width: 15px
+        height: 15px
+        display: block;
+        background-repeat: no-repeat
+        background-size: 11px
+        background-position: center
+        margin-right 3px
 
 .resultado-frete
     margin-top 10px
@@ -420,13 +457,30 @@
                         
                 &:nth-child(2n + 1)
                     background: #F6F6F6
+.fbits-componentes-tabelamedidas
+    p
+        font-size: 10px
+        color: #808080
+        line-height: 18px 
+        text-align: left
+        padding 0 15px
+        background: #f7f7f7
+        font-weight 300
+
+span.fbits-componentes-tabelamedidas 
+    padding-bottom: 10px
+    display: block
+
+div#fbits-breadcrumb 
+    padding: 0 15px
 
 .paddingbox, .fbits-produto-informacoes-extras
-    font-size: 14px
-    color: #333333
-    line-height: 18px
-    font-family: 'Muli'
+    font-size: 10px
+    color: #808080
+    line-height: 18px 
     text-align: left
+    padding 15px
+    font-weight 300
 
     iframe 
         @media(min-width: 992px)
@@ -434,18 +488,20 @@
             height: 480px
 
     p
-        font-size: 14px
-        color: #333333
-        line-height: 18px
-        font-family: 'Muli'
+        font-size: 10px
+        color: #808080
+        line-height: 18px 
         text-align: left
+        padding 15px
+        font-weight 300
  
     h2
-        font-size: 18px
-        font-weight: 700
-        color: #434343
-        margin-top 35px 
-        margin-bottom 15px
+        font-size: 10px
+        color: #808080
+        line-height: 18px 
+        text-align: left
+        padding 15px
+        font-weight 300
  
 .tabela__medidas-container
     ul
@@ -471,3 +527,35 @@
 .produto .fbits-avaliacao
     @media(max-width: 767px)
         width 100%
+
+ul.tabela__medidas 
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding 15px
+
+    > li
+        width 100%
+        height 30px 
+        line-height 30px
+
+        &:nth-child(2n + 1) 
+            background #eaeaea
+
+        > ul
+            display: flex
+            justify-content: space-between
+
+            li
+                width 33%
+                font-size 12px
+                color: #0d0f0f
+                height 30px
+                display: flex
+                align-items: center
+                padding-left: 15px
+
+ul.tabela__medidas-title li 
+    font-size: 11px
+    color: #0d0f0f
+    font-weight: 700

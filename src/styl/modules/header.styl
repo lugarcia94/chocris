@@ -4,6 +4,9 @@
     display: flex
     flex-wrap: wrap
 
+    .carrinho.carrinhoHead
+        position relative
+
     @media(max-width: 991px)
         position fixed
         top 0px
@@ -35,6 +38,9 @@
             align-items: center
             justify-content: space-between
             width 18%
+
+            @media(max-width 1200px)
+                width 28%
 
             @media(max-width 991px)
                 display none

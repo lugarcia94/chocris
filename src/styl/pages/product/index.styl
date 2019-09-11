@@ -114,9 +114,12 @@
         width: auto!important
         max-width: 90px!important
 
+    imagem__principal
+        margin 0 auto
+
     .fbits-componente-imagemvariantethumb.fbits-produto-imagens
         width: 85px 
-        order: -1
+        order: -1 
 
         &:first-child
             a
@@ -147,18 +150,27 @@
 
              
 
-    #msgEstoqueDisponivel
-        margin: 0
-        order: 2
-        margin: 0 auto
-        display: none
+    #msgEstoqueDisponivel 
+        margin: 0 auto 
+        margin-bottom 10px
 
         span  
-            font-size: 12px
+            font-size: 0
             color: $cor02
-            max-width 140px
+            max-width 100%
             display: block 
-            text-align: center
+            text-align: right
+
+            &:after
+                content: 'em estoque'
+                font-size 10px
+                color #0d0f0f
+                margin-left 3px
+                display inline-block
+
+            b
+                font-size 10px
+                color #0d0f0f
 
     .avisoIndisponivel
         margin: 10px 0
@@ -196,7 +208,7 @@
         position relative
         border: 1px solid #E7E7E7
         border-width 1px 0
-        padding: 20px 15px
+        padding: 20px 0
         display: flex
         align-items center
         justify-content space-between
@@ -899,12 +911,40 @@ div#fbits-avaliar-produto
     @media(max-width: 767px)
         max-width 100%
 
+.matriz__atributos-title 
+    display: block
+    font-size: 9px
+    color: #9a9a9a
+    margin: 10px 0
+    text-align: center
 
+.product__parcelamento
+    .details-content > p 
+        border: 1px solid #e0e0e0
+    
+.matriz__atributos
+    br
+        display none
+    table
+        tr 
+            background #fff!important
+            border 1px solid #e0e0e0
+            margin-bottom 10px
+            display: flex!important
+            justify-content: space-around
+
+            th, td
+                width auto!important
+            th,p
+                font-size: 12px!important
+                color: #666666!important
+                font-weight: 700!important
+    
 .sku__brand
     display: flex
     align-items: center 
     margin-top 5px
-    margin-bottom 30px
+    margin-bottom 10px
     width: 100%
 
     .fbits-sku
@@ -1404,6 +1444,9 @@ section.showcase__one.showcase__list .showcase__container
 .content.produto
     border-top: 1px solid #F3F3F3 
 
+.imagem__principal 
+    margin: 0 auto
+
 .product
     &__content
         max-width 607px
@@ -1413,18 +1456,44 @@ section.showcase__one.showcase__list .showcase__container
 
     &__tabs
         margin-bottom 10px
+        background: #f7f7f7
 
         &--content
             opacity 0
             height 0
-            visibility hidden            
+            visibility hidden 
+
+            .infoProd
+                color #808080
+                font-size 9px  
         
         &--title
-            display block
+            display flex 
             cursor pointer
             color #0D0F0F
             background #F7F7F7
             padding 15px
+            justify-content: space-between
+            align-items: center
+            font-size 14px
+            color #0d0f0f
+
+            &:after
+                content: '+' 
+                font-size: 25px  
+                display: flex
+                height: 10px
+                align-items: center
+
+.on__desc
+    .product__tabs--content
+            opacity 1
+            height auto
+            visibility visible  
+
+    .product__tabs--title
+        &:after
+            content: '-'
 
 .active__footer
     .footer__list
