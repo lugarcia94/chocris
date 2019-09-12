@@ -10,6 +10,7 @@ define(['jquery', 'slick-carousel'], ($) => {
                     slidesToShow: 4,
                     vertical: true,
                     inifinite: false,
+                    arrows: false,
                     dots: false,
                     responsive: [
                         {
@@ -17,7 +18,8 @@ define(['jquery', 'slick-carousel'], ($) => {
                             settings: {
                                 slidesToShow: 1,
                                 vertical: false,
-                                dots: true
+                                dots: true,
+                                arrows: false
                             }
                         },
                         {
@@ -25,7 +27,8 @@ define(['jquery', 'slick-carousel'], ($) => {
                             settings: {
                                 slidesToShow: 1,
                                 vertical: false,
-                                dots: true
+                                dots: true,
+                                arrows: false
                             }
                         },
                         {
@@ -33,6 +36,7 @@ define(['jquery', 'slick-carousel'], ($) => {
                             settings: {
                                 vertical: false,
                                 slidesToShow: 1,
+                                arrows: false,
                                 dots: true
                             }
                         },
