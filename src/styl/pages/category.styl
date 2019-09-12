@@ -1,17 +1,18 @@
 .category
     &__header
         &-container
-            max-width: 1330px
-            padding: 0 15px
+            max-width: 1920px
+            padding: 0 30px
             width: 100%
             margin: 0 auto
         &-wrapper
             display: flex
             align-items: center
             justify-content: space-between
-            flex-wrap: wrap
-            padding: 35px 0
+            flex-wrap: wrap 
+            padding 10px 0
             border-bottom: 1px solid #E7E7E7
+            border-top: 1px solid #E7E7E7
     &__breadcrumb
         >ol
             display: inline-block
@@ -21,24 +22,31 @@
                     span[itemprop]
                         font-size: 0px
                         &:before
-                            content: 'Você está em: Página Inicial'
-                            font-size: 13px
+                            content: 'home'
+                            font-size: 11px
                 span[itemprop]
-                    font-size: 13px
-                    color: #333333
-                    font-weight: 500
-                    line-height: 16px
+                    font-size: 11px
+                    color: #6d6d5f
+                    font-weight: 400
+                    line-height: 14px
                 .separador
                     &:before
-                        content: '/'
+                        content: '' !important;
+                        display: inline-block;
+                        border-radius: 50%;
+                        width: 0.31rem;
+                        height: 0.31rem;
+                        background: #808080;
+                        vertical-align: middle;
+                        margin: 0 0.31rem;
                 &:last-child
                     span[itemprop]
                         font-weight: bold
     &__inforesult
-        font-size: 13px
-        color: #333333
-        font-weight: 500
-        line-height: 16px
+        font-size: 11px
+        color: #808080
+        font-weight: 400
+        line-height: 13px
     &__ordenation
         .fbits-ordenar
             display: flex
@@ -81,8 +89,8 @@
 
     &__list
         &-container
-            max-width: 1330px
-            padding: 0 15px
+            max-width: 1920px
+            padding: 0 30px
             width: 100%
             margin: 0 auto
         &-wrapper
@@ -195,7 +203,7 @@
                 font-size: 15px
                 color: #ffffff
     &__products
-        width: 80%
+        width: 100%
         >span 
             display: flex
             flex-wrap: wrap
@@ -311,3 +319,15 @@
     .category__products
         .fbits-item-lista-spot
             flex: 1 1 49%
+
+.category__name span 
+    font-size: 22px
+    color: #000000
+    font-weight 400
+
+.category__ordenation 
+    margin-top: 10px
+
+
+.fbits-item-lista-spot.fbits-item-lista-spot-empty 
+    display: none

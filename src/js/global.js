@@ -1,5 +1,10 @@
 
 $(document).ready(function(){
+    
+    var categoryName = Fbits.Categoria.Nome;
+    if (categoryName) {
+      $('.category__name > span').append(categoryName);
+    }
 
     if ($('.product__offer .product__boleto .details-content').length){
       const str = $('.product__offer .product__boleto .details-content').text();
@@ -22,9 +27,7 @@ $(document).ready(function(){
         var element = e.target;  
         $(this).addClass('active__search'); 
     });
-
  
-     
     
     if( $(".category__products >span").length){
       $(".category__products >span").append("<div class='fbits-item-lista-spot fbits-item-lista-spot-empty'></div>")
