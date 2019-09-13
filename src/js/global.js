@@ -1,9 +1,18 @@
 
 $(document).ready(function(){
     
-    var categoryName = Fbits.Categoria.Nome;
-    if (categoryName) {
+    
+    if ($('.fbits-categoria').length) {
+      var categoryName = Fbits.Categoria.Nome;
       $('.category__name > span').append(categoryName);
+    }
+
+    if($('.category__banner-topo').length) {
+      $('.category__products.showcase__list > span').prepend($('.category__banner-topo'))
+    }
+
+    if($('.category__banner-rodape').length) {
+      $('.category__products.showcase__list > span').append($('.category__banner-rodape'))
     }
 
     if ($('.product__offer .product__boleto .details-content').length){
