@@ -59,6 +59,8 @@
             line-height: 16px
             text-transform: none
             white-space: nowrap
+            @media(max-width: 991px)
+                display none
         select 
             height 30px
             background-color: #ffffff
@@ -104,7 +106,7 @@
             align-items: flex-start
             justify-content: space-between
     &__filter
-        max-width: 220px
+        max-width: 80%
         width: 100%
         &-close
             display: none
@@ -129,18 +131,19 @@
             .liCores
                 position relative
             >li
-                font-size: 14px
+                font-size: 10px
                 color: #333333
-                font-weight: 500
-                line-height 28px
+                font-weight: 500 
                 height auto
                 line-height: 18px
-                overflow hidden
-                margin-bottom 5px
+                overflow hidden 
+                margin 0!important
+                position relative
+
                 input
                     appearance none
-                    width: 15px
-                    height 15px
+                    width: 10px
+                    height 10px
                     border: 1px solid #D9D9D9
                     border-radius: 3px
                     &:checked
@@ -265,7 +268,7 @@
             left 0
             transition: all .3s
             transform: translate3d(-100%, 0, 0)
-            z-index: 99
+            z-index: 99999999
             height: 100vh
             max-width: 100%
             background: rgba(0,0,0, 0.75)
@@ -283,6 +286,11 @@
                 position absolute
                 top: 0px
                 left 255px
+                color: #fff
+                font-size: 30px
+                margin-left: 5px
+                font-weight: 700
+
         &__header
             &-wrapper 
                 > *
@@ -294,25 +302,20 @@
                 .fbits-ordenar
                     justify-content: center
         &__btn-mobile
+            border: 1px solid #f0f0f0!important
+            display block
+            border: 1px solid #f0f0f0 !important
+            display: block
+            width: 40%
+            height: 30px
+            margin-top: 0.63rem
+            padding-left: 5px
             display: flex
             align-items: center
-            justify-content: center
-            max-width 290px
-            width: 100%
-            height 40px
-            margin: 0 auto
-            background: #333333
-            font-size: 14px
-            color: #FFFFFF
-            text-transform: uppercase
-            font-weight: bold
-            transition: all .3s
-            margin-top: 15px
-            cursor: pointer
-            &:hover
-                background: #ffffff
-                color: #333333
-                border: 1px solid #333333
+            justify-content: space-between
+            color: #333
+            font-size: 0.81rem
+
         &__footer
             padding-bottom: 55px
             &-wrapper
@@ -341,3 +344,61 @@
 
 .fbits-item-lista-spot.fbits-item-lista-spot-empty 
     display: none
+
+@media(min-width 992px)
+    .category__filter-options
+        ul
+            display: flex
+            align-items: center 
+
+            li
+                padding 0!important
+                border none!important 
+                margin-right: 10px!important
+                margin-top: 10px!important
+
+                .fbits-filtro-titulo-pai
+                    height: 1.88rem!important
+                    background-color: #fff!important
+                    border: 1px solid #f0f0f0!important
+                    border-radius: 0!important
+                    color: #333!important
+                    font-size: 0.81rem!important
+                    font-weight 400
+                    padding 0 10px
+                    line-height 1.88rem!important
+                    width 140px
+                    background-image svg-inline(arrowdownselect)
+                    background-size: auto
+                    background-position: 90% center
+                    background-repeat: no-repeat
+                
+                &:hover
+                    ul.fbits-lista-filtro-filho
+                        display: block
+                        position: absolute
+                        background: #fff
+                        border: 1px solid #f0f0f0 !important
+                        padding: 10px
+                        max-width: 100% 
+
+                ul.fbits-lista-filtro-filho
+                    display none
+
+.category__header-container.filter 
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+
+.category__btn-text
+    background-repeat: no-repeat
+    background-position: 95%
+    width: 100%
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAYCAMAAADTXB33AAAARVBMVEUlJiYzNDRFRkZPUFBVVlZZWVliY2NpaWlsbGxtbW17e3uJiYmen5+nqKi0tLTW1tbo6Ojp6enu7u739/f6+vr8/Pz///9cJH4/AAAAVUlEQVR4AcXSOxKEIBAAUXYF/IjKiM79j2pitWJJKp2+tI0Wq0BxuRUzMr6j9pdRaJKe7X2AMATCEOgyBMI25EFqRay+kxNxX5Gfi7T+xxJpGqZKAxzLHjH8+h48tQAAAABJRU5ErkJggg==')
+
+.ac_over 
+    background: #b18450!important
+    color: #EEE
+
+

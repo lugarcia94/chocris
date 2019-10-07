@@ -1,11 +1,8 @@
 
 $(document).ready(function(){
     
-    
-    if ($('.fbits-categoria').length) {
-      var categoryName = Fbits.Categoria.Nome;
-      $('.category__name > span').append(categoryName);
-    }
+
+
 
     if($('.category__banner-topo').length) {
       $('.category__products.showcase__list > span').prepend($('.category__banner-topo'))
@@ -32,10 +29,7 @@ $(document).ready(function(){
       $(this).parent().toggleClass('active__footer');
     });
 
-    $('.headerSearch').on('click', function(e){
-        var element = e.target;  
-        $(this).addClass('active__search'); 
-    });
+ 
  
     
     if( $(".category__products >span").length){
@@ -56,7 +50,7 @@ $(document).ready(function(){
 
     $(".newsletter-box input#Nome").attr("placeholder", "Seu nome aqui");
     $(".newsletter-box input#Email").attr("placeholder", "Seu e-mail aqui");
-
+    $('#btnCalculaFreteProduto').val('Calcular')
     $( ".category__btn-mobile" ).click(function() {
       $('body').addClass('filter__open');
     });
@@ -80,6 +74,24 @@ $(document).ready(function(){
             jQuery('.minicart-qtde-itens').append('0');
         }
     });
+    
+    if (window.innerWidth > 991) {
+        $('.menu li').each(function(){
+          var img = $(this).find('a img');
+          $(this).append($(img));
+
+          var el = $(this).find('img, ul');
+          el.wrapAll('<div class="product__menu"></div>');
+          el.find('.product__menu').prependTo(el); 
+
+        });
+
+
+ 
+        
+    }
+
+
 
     $('.header__navbar-wrapper .menu >li').each(function(){
         var list = $(this).find('>ul').html();
@@ -158,13 +170,38 @@ $(document).ready(function(){
     $( ".botoesSpot .spotTelevendas" ).each(function() {
         $(this).closest(".spot").addClass("spot__request");
     });
- 
+
+    $('.headerSearch').on('click', function(e){
+      var target2 = e.target;
+
+      if($(target2).hasClass('active__search')) {
+        $(this).removeClass('active__search');
+      } else {
+        $(this).addClass('active__search');
+      }
+    });
+    
+    if ($('.fbits-categoria').length) {
+      var categoryName = Fbits.Categoria.Nome; 
+        $('.category__name > span').append(categoryName);
+    }
 });
 
-$( document ).ajaxComplete(function(event, xhr, settings) {
-  if( settings.url.indexOf("CadastroNews") >= 0 ){
-    $(".popUp-News input#modal-Nome").attr("placeholder", "Seu nome aqui")
-    $(".popUp-News input#modal-Email").attr("placeholder", "Seu e-mail aqui")
-    $(".popUp-News input#btnCadastrarNews").attr("value", "QUERO GANHAR!")
+ 
+setTimeout(function(){
+  if (window.innerWidth < 992) {
+    $('.menu__dropdow').on('click', function(){
+      $(this).parent().toggleClass('open__menu');
+    });
+
+    $('.header__navbar').on('click', function(e){
+      var target1 = e.target;
+      if($(target1).hasClass('header__navbar')) {
+        $('body').removeClass('menu__open');
+      }
+    });
+
+
+
   }
-});
+}, 1000);

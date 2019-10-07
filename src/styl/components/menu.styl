@@ -58,6 +58,10 @@
         @media(max-width : 991px)
             flex-wrap: wrap
             margin: 0
+
+
+
+            
         li.item
             background: transparent
             padding: 0!important
@@ -98,12 +102,27 @@
                 @media(max-width : 991px)
                     position: static
                     opacity: 1
+                    top: 0
                     visibility: visible
-                    border: none
-                    background: #F4F4F4
-                    margin: 0 -15px
-                    transition: all .3s
-                    max-height: 0px
+                    border none
+                    
+                    &:before
+                        content: '-'
+                        position: absolute
+                        right: 15px
+                        top: 15px
+                        font-size: 35px
+                        cursor pointer
+
+                    > div 
+                        position: static
+                        opacity: 1
+                        visibility: visible
+                        border: none
+                        transition: all .3s
+                        max-height: 0px
+
+
                     >.menu__image
                         display: none
 
@@ -115,11 +134,16 @@
                 overflow-y: scroll
 
                 @media(max-width : 991px)
-                    padding: 20px 15px
-                    width: 100%
-                    max-width: 100%
-                    flex: 1 1 100%
-                    min-width: 0px
+                    min-width 100%
+                    padding 0 15px
+                    max-height none
+                    overflow hidden
+
+                    li, a
+                        border none!important
+                        height 30px!important
+                        line-height: 30px!important
+
             .menu__image
                 flex: 1 1 auto
                 a
@@ -199,6 +223,8 @@
                     column-count: 4
                     max-height: none
                     overflow: hidden
+ 
+                    
                     @media(max-width : 991px)
                         column-count: unset
                         padding: 0
@@ -282,7 +308,15 @@
                     padding-right: 45px
                     display: flex!important
                     padding-left 15px
- 
+        .open__menu
+            .menu__dropdow
+                &:before
+                    content '+'!important
+
+                > div
+                    max-height none!important
+                    width 100%
+
         li.select
             @media(max-width : 991px)
                 a.menu-geral
@@ -368,3 +402,13 @@
 
     .only__mobile
         display block
+
+.active__search
+    &:before
+        content 'X'
+        background: none !important
+        display: flex
+        align-items: center
+        justify-content: center
+        color: #000
+        font-weight: 700
