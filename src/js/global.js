@@ -85,13 +85,7 @@ $(document).ready(function(){
           el.find('.product__menu').prependTo(el); 
 
         });
-
-
- 
-        
     }
-
-
 
     $('.header__navbar-wrapper .menu >li').each(function(){
         var list = $(this).find('>ul').html();
@@ -165,7 +159,7 @@ $(document).ready(function(){
         }
     });
 
-    $('.btNews').attr('value', 'QUERO APROVEITAR');
+    $('.btNews').attr('value', 'QUERO!');
 
     $( ".botoesSpot .spotTelevendas" ).each(function() {
         $(this).closest(".spot").addClass("spot__request");
