@@ -164,7 +164,7 @@ $(document).ready(function(){
     $( ".botoesSpot .spotTelevendas" ).each(function() {
         $(this).closest(".spot").addClass("spot__request");
     });
-
+    if (window.innerWidth < 992) {
     $('.headerSearch').on('click', function(e){
       var target2 = e.target;
 
@@ -174,6 +174,7 @@ $(document).ready(function(){
         $(this).addClass('active__search');
       }
     });
+  }
     
     if ($('.fbits-categoria').length) {
       var categoryName = Fbits.Categoria.Nome; 
