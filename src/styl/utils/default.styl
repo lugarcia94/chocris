@@ -158,3 +158,129 @@ body.minhaConta.fbits-minhaConta div.content.minhaconta .sideBar .filtroTitle.ti
 
 .spot, section.fbits-section-home .spot
   border 1px solid transparent!important
+
+body.fbits-carrinho, body.fbits-login,body.minhaConta 
+  padding 0!important
+
+.head-carrinho.headFechamento.container.tyc_container 
+    max-width: 100%
+    background: #f7f7f7
+
+    &:before, &:after
+      display none
+
+.fbits-center-responsivo
+  display: flex
+  align-items: center
+  justify-content: space-between
+  max-width: 1330px
+  padding: 20px 15px
+  margin: 0 auto
+
+  .headerLogo 
+      float: none
+
+      img
+        width auto
+
+  .pull-right.fbits-telefones
+    margin 0 
+    background: transparent
+    color: #9a9a9a
+
+    span
+      display: flex
+      align-items: center
+      &:after
+        content: ''
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAMAAAA8w5+RAAAALVBMVEX5+fmSkpLb29uCgoKKiorT09Ozs7Pr6+uioqLLy8vx8fG6urqamprDw8Pj4+MibU1ZAAAAU0lEQVR42r3NSQ7AIAhAUUAGx97/uCaaonbd9m8gLyHAS5lIfpqGWjmdVqIBXCzHLY9TwR1TnJNtw6ZzIi3LGmm0v0KP1TH4Rvgt0l1bWNAT+LMOnM8BaJL/qNsAAAAASUVORK5CYII=')
+        width: 20px
+        height: 20px
+        background-repeat: no-repeat
+        display block
+
+ul.fbits-responsive-carrinho-header li, .fbits-responsive-carrinho-subtotal, .fbits-responsive-carrinho-total
+  background transparent!important
+  border-top: 1px solid #ccc
+  border-bottom: 1px solid #ccc
+
+.fbits-carrinho .btn-success
+  background #373535!important
+    color: #373535
+    text-transform: uppercase
+    font-size: 12px
+    font-weight: 700
+
+.container-finalizar
+  .btn-success
+        background: #377f4f!important 
+        border 1px solid #377f4f!important
+
+.fbits-responsive-carrinho-item-descricao a
+  color #373535!important
+  font-weight: 700
+
+.fbits-carrinho a.btn.btn-danger.icon.remover:before, a.arrow:before, a.arrow:after
+  color #373535!important
+
+.fbits-carrinho 
+  .fbits-responsive-carrinho-items
+    border none!important
+
+  .fbits-responsive-carrinho-item-total
+    > .currency
+      color: #373535
+      font-weight: 700
+
+  .precoParcela
+    fbits-parcela-juros
+      display block
+
+  .fbits-responsive-carrinho-subtotal 
+    span
+      color: #373535
+      text-transform: uppercase
+      font-size: 12px
+      font-weight 700
+
+  .fbits-responsive-carrinho-total
+    div
+      color: #373535
+      text-transform: uppercase
+      font-size: 12px
+      font-weight 700
+
+  #naoSeiCep
+    display none
+
+  input.btn.btn-success.btnCalcular
+    background: #373535!important 
+
+  .fbits-responsive-carrinho-desconto
+    padding 0!important
+
+  .footer
+    > div
+      max-width 1330px!important 
+
+      
+.fbits-box-login .btn.btn-success, .cadastroUsuario .btn-primary, input[type=submit], .switch-field input:checked+label
+  background #373535!important 
+  border-color: #373535
+  color: #fff
+
+a
+  color #373535!important
+
+.fbits-social-login button
+  margin-top: 10px
+
+
+.logged 
+  .header__topbar-links
+    li
+      &:first-child
+        display none!important
+
+  .deslogado__block
+    display none

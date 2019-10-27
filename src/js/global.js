@@ -200,3 +200,9 @@ setTimeout(function(){
 
   }
 }, 1000);
+
+var userLogged = Fbits.Usuario.Email;
+
+if($(userLogged)!= null) {
+    $('body').addClass('logged');
+}
