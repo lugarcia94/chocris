@@ -203,6 +203,6 @@ setTimeout(function(){
 
 var userLogged = Fbits.Usuario.Email;
 
-if($(userLogged)!= null) {
+if($(trim(userLogged)) != null) {
     $('body').addClass('logged');
 }
